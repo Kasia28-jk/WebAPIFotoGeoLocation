@@ -19,10 +19,10 @@ namespace FotoGeoLocationWebApplication.Controllers
         }
 
         [HttpPost]
-        public void Post()
+        public void Post(IFormFile file)
         {
-            //var context = _contextAccessor.HttpContext;
-            var file = HttpContext.Request.Form.Files.Count > 0 ? HttpContext.Request.Form.Files[0] : null;
+           // var context = _contextAccessor.HttpContext;
+            //var file = HttpContext.Request.Form.Files.Count > 0 ? HttpContext.Request.Form.Files[0] : null;
             if (file != null && file.Length > 0)
             {
                 var fileName = Path.GetFileName(file.FileName);
