@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using FotoGeoLocationWebApplication.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
@@ -12,17 +13,20 @@ namespace FotoGeoLocationWebApplication.Controllers
     public class UploadPicturesController : Controller
     {
         private readonly IWebHostEnvironment _env;
+     //   private readonly IHttpContextAccessor _contextAccessor;
 
-        public UploadPicturesController(IWebHostEnvironment env)
+        public UploadPicturesController(/*IHttpContextAccessor contextAccessor,*/ IWebHostEnvironment env)//IWebHostEnvironment env)
         {
+          //  _contextAccessor = contextAccessor;
             _env = env;
         }
 
-        [HttpPost]
-        public void Post(IFormFile file)
+        [HttpPost, DisableRequestSizeLimit]
+        public string Post(IFormFile file)
         {
-           // var context = _contextAccessor.HttpContext;
+            // var context = _contextAccessor.HttpContext;
             //var file = HttpContext.Request.Form.Files.Count > 0 ? HttpContext.Request.Form.Files[0] : null;
+
             if (file != null && file.Length > 0)
             {
                 var fileName = Path.GetFileName(file.FileName);
@@ -34,6 +38,20 @@ namespace FotoGeoLocationWebApplication.Controllers
                 f.Close();
                 f.Dispose();
             }
+            return "test";
+
+            /* if (file != null && file.Length > 0)
+             {
+                 var fileName = Path.GetFileName(file.FileName);
+                 var guid = Guid.NewGuid();
+                 var path = Path.Combine(_env.ContentRootPath, "UploadedPictures", $"{guid}{fileName}");
+                 var f = new FileStream(path, FileMode.Create);
+                 file.CopyTo(f);
+                 f.Flush();
+                 f.Close();
+                 f.Dispose();
+             }
+             return "test";*/
             //return "success" + file != null ? "/Files/" + file.Name : null;
         }
 

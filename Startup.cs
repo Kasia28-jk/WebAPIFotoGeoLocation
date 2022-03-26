@@ -31,11 +31,13 @@ namespace FotoGeoLocationWebApplication
         {
             services.AddCors(options => options.AddPolicy("wszystkoDozwolone", builder =>
             {
-                builder.AllowAnyMethod().WithOrigins("http://localhost:4200").AllowAnyHeader().Build();
+                builder.AllowAnyMethod().AllowAnyOrigin();//.WithOrigins("http://192.168.55.8:4200/").AllowAnyHeader().Build();
             }));
 
+        
             services.AddControllers();
-            services.AddSingleton<UploadPicturesController>();
+            services.AddHttpContextAccessor();
+           // services.AddSingleton<UploadPicturesController>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "FotoGeoLocationWebApplication", Version = "v1" });
@@ -50,6 +52,7 @@ namespace FotoGeoLocationWebApplication
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //app.UseHttpLogging();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

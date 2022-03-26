@@ -22,7 +22,6 @@ D:\PrazaInz\FotoGeoLocationWebApplication\obj\Debug\net5.0\staticwebassets\FotoG
 D:\PrazaInz\FotoGeoLocationWebApplication\obj\Debug\net5.0\FotoGeoLocationWebApplication.RazorTargetAssemblyInfo.cache
 D:\PrazaInz\FotoGeoLocationWebApplication\obj\Debug\net5.0\FotoGeoLocationWebApplication.csproj.CopyComplete
 D:\PrazaInz\FotoGeoLocationWebApplication\obj\Debug\net5.0\FotoGeoLocationWebApplication.dll
-D:\PrazaInz\FotoGeoLocationWebApplication\obj\Debug\net5.0\refint\FotoGeoLocationWebApplication.dll
 D:\PrazaInz\FotoGeoLocationWebApplication\obj\Debug\net5.0\FotoGeoLocationWebApplication.pdb
 D:\PrazaInz\FotoGeoLocationWebApplication\obj\Debug\net5.0\FotoGeoLocationWebApplication.genruntimeconfig.cache
 D:\PrazaInz\FotoGeoLocationWebApplication\obj\Debug\net5.0\ref\FotoGeoLocationWebApplication.dll
@@ -79,3 +78,4 @@ D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\runtimes\win-x64\nati
 D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
 D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\PrazaInz\FotoGeoLocationWebApplication\obj\Debug\net5.0\refint\FotoGeoLocationWebApplication.dll
