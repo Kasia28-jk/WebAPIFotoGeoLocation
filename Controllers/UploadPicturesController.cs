@@ -1,4 +1,5 @@
 ﻿using FotoGeoLocationWebApplication.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,6 +22,7 @@ namespace FotoGeoLocationWebApplication.Controllers
             _env = env;
         }
 
+        [EnableCors("AllowMyOrigin")]
         [HttpPost, DisableRequestSizeLimit]
         public string Post(IFormFile file)
         {
@@ -55,6 +57,7 @@ namespace FotoGeoLocationWebApplication.Controllers
             //return "success" + file != null ? "/Files/" + file.Name : null;
         }
 
+        [EnableCors("AllowMyOrigin")]
         [HttpGet]
         public string get()
         {

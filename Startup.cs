@@ -29,12 +29,18 @@ namespace FotoGeoLocationWebApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options => options.AddPolicy("wszystkoDozwolone", builder =>
-            {
-                builder.AllowAnyMethod().AllowAnyOrigin();//.WithOrigins("http://192.168.55.8:4200/").AllowAnyHeader().Build();
-            }));
+            /*services.AddCors(options => options.AddPolicy("wszystkoDozwolone", builder =>
+              {
+                 builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+                 // builder.AllowAnyMethod().WithOrigins("http://192.168.55.8:4200").AllowAnyHeader().Build();//.WithOrigins("http://192.168.55.8:4200/").AllowAnyHeader().Build();
+              }));*/
 
-        
+            services.AddCors(options => {
+                options.AddPolicy("AllowMyOrigin",
+                builder => builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod());
+            });
+
+            //app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowAnyCredentials());
             services.AddControllers();
             services.AddHttpContextAccessor();
            // services.AddSingleton<UploadPicturesController>();
@@ -63,7 +69,8 @@ namespace FotoGeoLocationWebApplication
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseCors("wszystkoDozwolone");
+            //app.UseCors("wszystkoDozwolone");
+            app.UseCors("AllowMyOrigin");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
