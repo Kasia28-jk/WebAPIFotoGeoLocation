@@ -1,5 +1,6 @@
 using FotoGeoLocationWebApplication.Controllers;
 using FotoGeoLocationWebApplication.Data;
+using FotoGeoLocationWebApplication.GpsData;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -43,7 +44,9 @@ namespace FotoGeoLocationWebApplication
             //app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowAnyCredentials());
             services.AddControllers();
             services.AddHttpContextAccessor();
-           // services.AddSingleton<UploadPicturesController>();
+            //services.AddScoped<IGpsDataExtractor, GpsDataExtractor>();
+            services.AddSingleton<IGpsDataExtractor, GpsDataExtractor>();
+            // services.AddSingleton<UploadPicturesController>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "FotoGeoLocationWebApplication", Version = "v1" });

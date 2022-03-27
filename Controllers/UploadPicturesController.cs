@@ -1,11 +1,11 @@
-﻿using FotoGeoLocationWebApplication.Models;
-using Microsoft.AspNetCore.Cors;
+﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
 using System;
 using System.IO;
+using System.Drawing;
+using FotoGeoLocationWebApplication.GpsData;
 
 namespace FotoGeoLocationWebApplication.Controllers
 {
@@ -14,21 +14,18 @@ namespace FotoGeoLocationWebApplication.Controllers
     public class UploadPicturesController : Controller
     {
         private readonly IWebHostEnvironment _env;
-     //   private readonly IHttpContextAccessor _contextAccessor;
+        private readonly IGpsDataExtractor _gpsDataExtractor;
 
-        public UploadPicturesController(/*IHttpContextAccessor contextAccessor,*/ IWebHostEnvironment env)//IWebHostEnvironment env)
+        public UploadPicturesController(IWebHostEnvironment env, IGpsDataExtractor gpsDataExtractor)
         {
-          //  _contextAccessor = contextAccessor;
             _env = env;
+            _gpsDataExtractor = gpsDataExtractor;
         }
 
         [EnableCors("AllowMyOrigin")]
         [HttpPost, DisableRequestSizeLimit]
         public string Post(IFormFile file)
         {
-            // var context = _contextAccessor.HttpContext;
-            //var file = HttpContext.Request.Form.Files.Count > 0 ? HttpContext.Request.Form.Files[0] : null;
-
             if (file != null && file.Length > 0)
             {
                 var fileName = Path.GetFileName(file.FileName);
@@ -39,22 +36,11 @@ namespace FotoGeoLocationWebApplication.Controllers
                 f.Flush();
                 f.Close();
                 f.Dispose();
+
+                var image = Image.FromFile(path);
+                var gpsData = _gpsDataExtractor.GetGpsData(image);
             }
             return "test";
-
-            /* if (file != null && file.Length > 0)
-             {
-                 var fileName = Path.GetFileName(file.FileName);
-                 var guid = Guid.NewGuid();
-                 var path = Path.Combine(_env.ContentRootPath, "UploadedPictures", $"{guid}{fileName}");
-                 var f = new FileStream(path, FileMode.Create);
-                 file.CopyTo(f);
-                 f.Flush();
-                 f.Close();
-                 f.Dispose();
-             }
-             return "test";*/
-            //return "success" + file != null ? "/Files/" + file.Name : null;
         }
 
         [EnableCors("AllowMyOrigin")]
