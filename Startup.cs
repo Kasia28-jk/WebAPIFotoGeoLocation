@@ -35,7 +35,7 @@ namespace FotoGeoLocationWebApplication
                  builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
                  // builder.AllowAnyMethod().WithOrigins("http://192.168.55.8:4200").AllowAnyHeader().Build();//.WithOrigins("http://192.168.55.8:4200/").AllowAnyHeader().Build();
               }));*/
-
+            services.AddLogging();
             services.AddCors(options => {
                 options.AddPolicy("AllowMyOrigin",
                 builder => builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod());
@@ -61,6 +61,8 @@ namespace FotoGeoLocationWebApplication
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //loggerFactory.AddFile("Logs/app-{Date}.txt");
+
             //app.UseHttpLogging();
             if (env.IsDevelopment())
             {

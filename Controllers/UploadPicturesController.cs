@@ -6,6 +6,7 @@ using System;
 using System.IO;
 using System.Drawing;
 using FotoGeoLocationWebApplication.GpsData;
+using Microsoft.Extensions.Logging;
 
 namespace FotoGeoLocationWebApplication.Controllers
 {
@@ -15,11 +16,13 @@ namespace FotoGeoLocationWebApplication.Controllers
     {
         private readonly IWebHostEnvironment _env;
         private readonly IGpsDataExtractor _gpsDataExtractor;
+        private readonly ILogger _logger;
 
-        public UploadPicturesController(IWebHostEnvironment env, IGpsDataExtractor gpsDataExtractor)
+        public UploadPicturesController(IWebHostEnvironment env, IGpsDataExtractor gpsDataExtractor, ILogger<UploadPicturesController> logger)
         {
             _env = env;
             _gpsDataExtractor = gpsDataExtractor;
+            _logger = logger;
         }
 
         [EnableCors("AllowMyOrigin")]
@@ -38,7 +41,19 @@ namespace FotoGeoLocationWebApplication.Controllers
                 f.Dispose();
 
                 var image = Image.FromFile(path);
-                var gpsData = _gpsDataExtractor.GetGpsData(image);
+
+                try
+                {
+                    var gpsData = _gpsDataExtractor.GetGpsData(image);
+                    image.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    image.Dispose();
+                    _logger.LogWarning("Received file doesn't contain GPS data!");
+                    System.IO.File.Delete(path);
+                    return "failed";
+                }
             }
             return "test";
         }

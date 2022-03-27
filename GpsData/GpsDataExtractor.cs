@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using System;
 using System.Drawing;
 using System.IO;
 
@@ -6,6 +7,11 @@ namespace FotoGeoLocationWebApplication.GpsData
 {
     public class GpsDataExtractor : IGpsDataExtractor
     {
+        private readonly ILogger _logger;
+        public GpsDataExtractor(ILogger<GpsDataExtractor> logger)
+        {
+            _logger = logger;
+        }
         public GpsData GetGpsData(Image image)
         {
             var latitude = GetLatitudeCoefficient(image) * GetLatitudeValue(image);
@@ -36,8 +42,7 @@ namespace FotoGeoLocationWebApplication.GpsData
             }
             catch (ArgumentException arg)
             {
-                Console.WriteLine(arg.Message);
-
+                _logger.LogError("The picture doesn't GPS data.", arg.Message);
                 throw;
             }
 
