@@ -1,6 +1,7 @@
 using FotoGeoLocationWebApplication.Controllers;
 using FotoGeoLocationWebApplication.Data;
 using FotoGeoLocationWebApplication.GpsData;
+using FotoGeoLocationWebApplication.Login;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -36,16 +37,21 @@ namespace FotoGeoLocationWebApplication
                  // builder.AllowAnyMethod().WithOrigins("http://192.168.55.8:4200").AllowAnyHeader().Build();//.WithOrigins("http://192.168.55.8:4200/").AllowAnyHeader().Build();
               }));*/
             services.AddLogging();
+
             services.AddCors(options => {
                 options.AddPolicy("AllowMyOrigin",
                 builder => builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod());
             });
 
             //app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowAnyCredentials());
+            services.AddScoped<IAuthorization, Authorization>();
+            services.AddScoped<IRegister, Register>();
+            services.AddScoped<IEncryptionProvider, EncryptionProvider>();
+            services.AddScoped<IGpsDataExtractor, GpsDataExtractor>();
+            
             services.AddControllers();
             services.AddHttpContextAccessor();
-            //services.AddScoped<IGpsDataExtractor, GpsDataExtractor>();
-            services.AddSingleton<IGpsDataExtractor, GpsDataExtractor>();
+           // services.AddSingleton<IGpsDataExtractor, GpsDataExtractor>();
             // services.AddSingleton<UploadPicturesController>();
             services.AddSwaggerGen(c =>
             {
@@ -61,9 +67,6 @@ namespace FotoGeoLocationWebApplication
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //loggerFactory.AddFile("Logs/app-{Date}.txt");
-
-            //app.UseHttpLogging();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
