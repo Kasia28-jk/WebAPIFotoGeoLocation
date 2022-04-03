@@ -26,7 +26,7 @@ namespace FotoGeoLocationWebApplication.Login
         {
             var res = new AuthorizedUserDto();
 
-            string hashed = _encryptionProvider.GetEncryptedPassword(login.Haslo);
+            string hashed = _encryptionProvider.GetEncryptedPassword(login.Password);
 
             var userLogin = _dataContext.Users.SingleOrDefault(x => x.UserName.Equals(login.Login) && x.Password.Equals(hashed));
 
@@ -35,7 +35,7 @@ namespace FotoGeoLocationWebApplication.Login
                 throw new Exception("Błędny login lub hasło!");
             }
 
-            res.Rola = "User";
+            res.Role = "User";
             /* Console.WriteLine("login:" + login.Login);
              Console.WriteLine("Haslo:" + login.Haslo);
              if (login.Login == "admin" && login.Haslo == "admin")
@@ -53,7 +53,7 @@ namespace FotoGeoLocationWebApplication.Login
 
             var klucz = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("bardzotrudnehaslotokena"));
             var zaszfrowanyKlucz = new SigningCredentials(klucz, SecurityAlgorithms.HmacSha256);
-            var token = new JwtSecurityToken("http://localhost:44354", null, new List<Claim> { new Claim(ClaimTypes.Role, res.Rola) }, null, DateTime.Now.AddMinutes(30), zaszfrowanyKlucz);
+            var token = new JwtSecurityToken("http://localhost:44354", null, new List<Claim> { new Claim(ClaimTypes.Role, res.Role) }, null, DateTime.Now.AddMinutes(30), zaszfrowanyKlucz);
             res.Token = new JwtSecurityTokenHandler().WriteToken(token);
             return res;
         }

@@ -38,6 +38,9 @@ namespace FotoGeoLocationWebApplication
               }));*/
             services.AddLogging();
 
+            services.AddDbContext<DataContext>(options =>
+             options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
+
             services.AddCors(options => {
                 options.AddPolicy("AllowMyOrigin",
                 builder => builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod());

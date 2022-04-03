@@ -19,11 +19,11 @@ namespace FotoGeoLocationWebApplication.Controllers
         }
 
         [HttpPost]
-        public bool RegisterUser([FromBody] RegisterDto rejestracja)
+        public bool RegisterUser([FromBody] RegisterDto register)
         {
             try
             {
-                _register.RegisterUser(rejestracja);
+                _register.RegisterUser(register);
             }
             catch
             {

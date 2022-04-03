@@ -4,6 +4,6 @@ namespace FotoGeoLocationWebApplication.Login
 {
     public interface IRegister
     {
-        void RegisterUser(RegisterDto rejestracja);
+        void RegisterUser(RegisterDto register);
     }
 }

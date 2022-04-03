@@ -21,25 +21,25 @@ namespace FotoGeoLocationWebApplication.Login
             _logger = logger;
         }
 
-        public void RegisterUser(RegisterDto rejestracja)
+        public void RegisterUser(RegisterDto register)
         {
-            if (rejestracja.Login == null) //Przetestowac czy jest wg mozliwe?
+            if (register.Login == null) //Przetestowac czy jest wg mozliwe?
             {
                 _logger.LogError("Dane użytkownika są nullowe! ");
                 throw new System.Exception();
             }
 
-            if (_dataContext.Users.Any(x => x.UserName.Equals(rejestracja.Login) && x.Enabled.Equals(true)))
+            if (_dataContext.Users.Any(x => x.UserName.Equals(register.Login) && x.Enabled.Equals(true)))
             {
                 _logger.LogError("Istnieje użytkownik o takim loginie");
                 throw new System.Exception();
             }
 
-            string hashed = _encryptionProvider.GetEncryptedPassword(rejestracja.Password);
+            string hashed = _encryptionProvider.GetEncryptedPassword(register.Password);
 
             var user = new User
             {
-                UserName = rejestracja.Login,
+                UserName = register.Login,
                 Password = hashed
             };
 

@@ -3,6 +3,6 @@
     public class AuthorizedUserDto
     {
         public string Token { get; set; }
-        public string Rola { get; set; }
+        public string Role { get; set; }
     }
 }

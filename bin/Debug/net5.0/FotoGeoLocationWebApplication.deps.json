@@ -38,6 +38,7 @@
           "Microsoft.EntityFrameworkCore.Design": "5.0.15",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.15",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.15",
+          "Microsoft.EntityFrameworkCore.Tools": "5.0.15",
           "Serilog.Extensions.Logging.File": "2.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "System.Drawing.Common": "5.0.3",
@@ -570,6 +571,11 @@
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/5.0.15": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "5.0.15"
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
@@ -3576,6 +3582,13 @@
       "sha512": "sha512-lFnEMvLufq3xIuhk3efmMUJvRNxOLlAKl8NNYqvbbtDZtzVdgZR/dZJAGcwZT6AxSGNM29LMDXYY+ydADWcggg==",
       "path": "microsoft.entityframeworkcore.sqlserver/5.0.15",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.5.0.15.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/5.0.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BDJ/l69JeZNJtd+dqfnD6UxC5CXnqsZ4Da0Uw5fKQ4iqvoqnYsTbviA/OvP+sOsNJhZdVzS/wGqrER4bgyfDSg==",
+      "path": "microsoft.entityframeworkcore.tools/5.0.15",
+      "hashPath": "microsoft.entityframeworkcore.tools.5.0.15.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
       "type": "package",
