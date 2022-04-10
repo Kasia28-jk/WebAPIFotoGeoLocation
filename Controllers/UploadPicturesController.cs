@@ -34,48 +34,62 @@ namespace FotoGeoLocationWebApplication.Controllers
 
         [EnableCors("AllowMyOrigin")]
         [HttpPost, DisableRequestSizeLimit]
-        public string Post(IFormFile file)
+        public UploadPictureResponse Post(IFormFile file)
         {
-            if (file != null && file.Length > 0)
+            if (file == null || file.Length == 0)
             {
-                var fileName = Path.GetFileName(file.FileName);
-                var guid = Guid.NewGuid();
-                var path = Path.Combine(_webHostEnvironment.ContentRootPath,
-                    "UploadedPictures",
-                    $"{guid}{fileName}");
-
-                using(var f = new FileStream(path, FileMode.Create))
+                _logger.LogError($"Plik {file.Name} jest pusty!");
+                return new UploadPictureResponse()
                 {
-                    file.CopyTo(f);
-                }
-
-                var image = Image.FromFile(path);
-
-                try
-                {
-                    var gpsData = _gpsDataExtractor.GetGpsData(image);
-                    var picture = new Picture()
-                    {
-                        Path = path,
-                        Latitude = gpsData.latitude,
-                        Longitude = gpsData.longitude,
-                        UserId = 1
-                    };
-
-                    _dataContext.Pictures.Add(picture);
-                    _dataContext.SaveChanges();
-
-                    image.Dispose();
-                }
-                catch (Exception ex) //moze stworzyc wlasny exception? we will see about that 
-                {
-                    image.Dispose();
-                    _logger.LogWarning($"Received file doesn't contain GPS data! {ex.Message}");
-                    System.IO.File.Delete(path);
-                    return "failed";
-                }
+                    Status = "failed"
+                };
             }
-            return "test";
+
+            var fileName = Path.GetFileName(file.FileName);
+            var guid = Guid.NewGuid();
+            var path = Path.Combine(_webHostEnvironment.ContentRootPath,
+                "UploadedPictures",
+                $"{guid}{fileName}");
+
+            using (var fileStream = new FileStream(path, FileMode.Create))
+            {
+                file.CopyTo(fileStream);
+            }
+
+            var image = Image.FromFile(path);
+
+            try
+            {
+                var gpsData = _gpsDataExtractor.GetGpsData(image);
+                var picture = new Picture()
+                {
+                    Path = path,
+                    Latitude = gpsData.latitude,
+                    Longitude = gpsData.longitude,
+                    UserId = 1
+                };
+
+                _dataContext.Pictures.Add(picture);
+                _dataContext.SaveChanges();
+
+                image.Dispose();
+            }
+            catch (Exception ex) //moze stworzyc wlasny exception? we will see about that 
+            {
+                image.Dispose();
+                _logger.LogWarning($"Otrzymane zdjęcie nie zawiera danych GPS! {ex.Message}");
+                System.IO.File.Delete(path);
+                return new UploadPictureResponse()
+                {
+                    Status = "failed"
+                };
+            }
+
+            _logger.LogInformation($"Zdjęcie {path} zostało zapisane w bazie danych");
+            return new UploadPictureResponse()
+            {
+                Status = "ok"
+            };
         }
 
         [EnableCors("AllowMyOrigin")]

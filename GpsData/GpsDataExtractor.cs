@@ -26,23 +26,30 @@ namespace FotoGeoLocationWebApplication.GpsData
         private double GetLatitudeValue(Image image)
         {
             const int latitudeIndex = 2;
-            var GpsLatitude = image.GetPropertyItem(latitudeIndex).Value; //szerokosc
-            return GetGpsValue(GpsLatitude);
+            try
+            {
+                var GpsLatitude = image.GetPropertyItem(latitudeIndex).Value; //szerokosc
+                return GetGpsValue(GpsLatitude);
+            }
+            catch (ArgumentException arg)
+            {
+                _logger.LogError("Zdjęcie nie zawiera danych GPS.", arg.Message);
+                throw;
+            }
         }
 
         private double GetLatitudeCoefficient(Image image)
         {
             const int latitudeDirectionIndex = 1;
             const byte northChar = 78; //(byte)'N'
-            byte[] GpsLatitudeDirection = default;
-
+            byte[] GpsLatitudeDirection;
             try
             {
                 GpsLatitudeDirection = image.GetPropertyItem(latitudeDirectionIndex).Value;
             }
             catch (ArgumentException arg)
             {
-                _logger.LogError("The picture doesn't GPS data.", arg.Message);
+                _logger.LogError("Zdjęcie nie zawiera danych GPS.", arg.Message);
                 throw;
             }
 
@@ -59,15 +66,32 @@ namespace FotoGeoLocationWebApplication.GpsData
         private double GetLongitudeValue(Image image)
         {
             const int longitudeIndex = 4;
-            var GpsLongitude = image.GetPropertyItem(longitudeIndex).Value; //dlugosc
-            return GetGpsValue(GpsLongitude);
+            try
+            {
+                var GpsLongitude = image.GetPropertyItem(longitudeIndex).Value; //dlugosc
+                return GetGpsValue(GpsLongitude);
+            }
+            catch (ArgumentException arg)
+            {
+                _logger.LogError("Zdjęcie nie zawiera danych GPS.", arg.Message);
+                throw;
+            }
         }
 
         private double GetLongitudeCoefficient(Image image)
         {
             const int longitudeDirectionIndex = 3;
             const byte eastChar = 69; //(byte)'E'
-            var GpsLongitudeDirection = image.GetPropertyItem(longitudeDirectionIndex).Value;
+            byte[] GpsLongitudeDirection;
+            try
+            {
+                GpsLongitudeDirection = image.GetPropertyItem(longitudeDirectionIndex).Value;
+            }
+            catch (ArgumentException arg)
+            {
+                _logger.LogError("Zdjęcie nie zawiera danych GPS.", arg.Message);
+                throw;
+            }
 
             if (GpsLongitudeDirection[0] == eastChar)
             {
