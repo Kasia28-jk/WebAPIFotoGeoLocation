@@ -1,6 +1,6 @@
 ﻿namespace FotoGeoLocationWebApplication.Login
 {
-    public interface IEncryptionProvider
+    public interface IHashProvider
     {
         string GetEncryptedPassword(string login);
     }

@@ -12,10 +12,11 @@ namespace FotoGeoLocationWebApplication.GpsData
         {
             _logger = logger;
         }
+
         public GpsData GetGpsData(Image image)
         {
-            var latitude = GetLatitudeCoefficient(image) * GetLatitudeValue(image);
-            var longitude = GetLongitudeCoefficient(image) * GetLongitudeValue(image);
+            var latitude = GetLatitudeCoefficient(image) * GetLatitudeValue(image); //szerokość geograficzna
+            var longitude = GetLongitudeCoefficient(image) * GetLongitudeValue(image); //długość geograficzna
             return new GpsData()
             {
                 latitude = latitude,

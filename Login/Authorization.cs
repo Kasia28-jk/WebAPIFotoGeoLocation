@@ -14,9 +14,9 @@ namespace FotoGeoLocationWebApplication.Login
     public class Authorization : IAuthorization
     {
         private readonly DataContext _dataContext;
-        private readonly IEncryptionProvider _encryptionProvider;
+        private readonly IHashProvider _encryptionProvider;
 
-        public Authorization(DataContext dataContext, IEncryptionProvider encryptionProvider)
+        public Authorization(DataContext dataContext, IHashProvider encryptionProvider)
         {
             _dataContext = dataContext;
             _encryptionProvider = encryptionProvider;

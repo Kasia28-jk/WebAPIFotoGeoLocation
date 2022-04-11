@@ -49,7 +49,7 @@ namespace FotoGeoLocationWebApplication
             //app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowAnyCredentials());
             services.AddScoped<IAuthorization, Authorization>();
             services.AddScoped<IRegister, Register>();
-            services.AddScoped<IEncryptionProvider, EncryptionProvider>();
+            services.AddScoped<IHashProvider, HashProvider>();
             services.AddScoped<IGpsDataExtractor, GpsDataExtractor>();
             
             services.AddControllers();

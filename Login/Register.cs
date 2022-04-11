@@ -9,11 +9,11 @@ namespace FotoGeoLocationWebApplication.Login
     public class Register : IRegister
     {
         private readonly DataContext _dataContext;
-        private readonly IEncryptionProvider _encryptionProvider;
+        private readonly IHashProvider _encryptionProvider;
         private readonly ILogger _logger;
 
         public Register(DataContext dataContext,
-            IEncryptionProvider encryptionProvider,
+            IHashProvider encryptionProvider,
             ILogger<Register> logger)
         {
             _dataContext = dataContext;

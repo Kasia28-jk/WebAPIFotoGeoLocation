@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FotoGeoLocationWebApplication.Login
 {
-    public class EncryptionProvider : IEncryptionProvider
+    public class HashProvider : IHashProvider
     {
         public string GetEncryptedPassword(string password)
         {
