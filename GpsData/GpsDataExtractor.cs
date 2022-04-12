@@ -29,7 +29,7 @@ namespace FotoGeoLocationWebApplication.GpsData
             const int latitudeIndex = 2;
             try
             {
-                var GpsLatitude = image.GetPropertyItem(latitudeIndex).Value; //szerokosc
+                var GpsLatitude = image.GetPropertyItem(latitudeIndex).Value; 
                 return GetGpsValue(GpsLatitude);
             }
             catch (ArgumentException arg)

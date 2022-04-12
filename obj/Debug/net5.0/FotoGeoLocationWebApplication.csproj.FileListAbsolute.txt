@@ -43,7 +43,6 @@ D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\Microsoft.IdentityMod
 D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\Newtonsoft.Json.dll
 D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\SQLitePCLRaw.batteries_v2.dll
 D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\SQLitePCLRaw.nativelibrary.dll
 D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\SQLitePCLRaw.core.dll
@@ -89,3 +88,4 @@ D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\Serilog.Formatting.Co
 D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\Serilog.Sinks.Async.dll
 D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\Serilog.Sinks.File.dll
 D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\Serilog.Sinks.RollingFile.dll
+D:\PrazaInz\FotoGeoLocationWebApplication\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

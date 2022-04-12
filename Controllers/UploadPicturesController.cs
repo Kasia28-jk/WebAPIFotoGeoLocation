@@ -1,11 +1,13 @@
 ﻿using FotoGeoLocationWebApplication.Data;
 using FotoGeoLocationWebApplication.Entities;
 using FotoGeoLocationWebApplication.GpsData;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Primitives;
 using System;
 using System.Drawing;
 using System.IO;
@@ -34,8 +36,12 @@ namespace FotoGeoLocationWebApplication.Controllers
 
         [EnableCors("AllowMyOrigin")]
         [HttpPost, DisableRequestSizeLimit]
+        [Authorize]
         public UploadPictureResponse Post(IFormFile file)
         {
+            //var cos = Request.Headers.Values.ToString(); //"Authorization"
+            Request.Headers.TryGetValue("Authorization", out StringValues authorizationToken);
+            var zmienna = authorizationToken.ToString();
             if (file == null || file.Length == 0)
             {
                 _logger.LogError($"Plik {file.Name} jest pusty!");
