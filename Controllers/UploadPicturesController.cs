@@ -11,6 +11,7 @@ using Microsoft.Extensions.Primitives;
 using System;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 
 namespace FotoGeoLocationWebApplication.Controllers
 {
@@ -39,9 +40,15 @@ namespace FotoGeoLocationWebApplication.Controllers
         [Authorize]
         public UploadPictureResponse Post(IFormFile file)
         {
-            //var cos = Request.Headers.Values.ToString(); //"Authorization"
             Request.Headers.TryGetValue("Authorization", out StringValues authorizationToken);
-            var zmienna = authorizationToken.ToString();
+            var token = authorizationToken.ToString();
+            var session = _dataContext.Sessions.SingleOrDefault(x => x.Token.Equals(token) 
+                                                                    && x.ExpiresAt > DateTime.UtcNow);
+            if(session == null)
+            {
+                return null;
+            }
+
             if (file == null || file.Length == 0)
             {
                 _logger.LogError($"Plik {file.Name} jest pusty!");
@@ -72,7 +79,7 @@ namespace FotoGeoLocationWebApplication.Controllers
                     Path = path,
                     Latitude = gpsData.latitude,
                     Longitude = gpsData.longitude,
-                    UserId = 1
+                    UserId = session.UserId,
                 };
 
                 _dataContext.Pictures.Add(picture);

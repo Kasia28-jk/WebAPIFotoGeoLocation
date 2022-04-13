@@ -52,6 +52,7 @@ namespace FotoGeoLocationWebApplication
                     In = ParameterLocation.Header,
                     Description = "Przed tokenem nale¿y dodaæ prefiks \"Bearer\""
                 });
+
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
                     {

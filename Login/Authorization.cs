@@ -1,4 +1,5 @@
 ﻿using FotoGeoLocationWebApplication.Data;
+using FotoGeoLocationWebApplication.Entities;
 using FotoGeoLocationWebApplication.Models;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -53,8 +54,17 @@ namespace FotoGeoLocationWebApplication.Login
 
             var klucz = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("bardzotrudnehaslotokena"));
             var zaszfrowanyKlucz = new SigningCredentials(klucz, SecurityAlgorithms.HmacSha256);
-            var token = new JwtSecurityToken("http://localhost:45455", null, new List<Claim> { new Claim(ClaimTypes.Role, res.Role) }, null, DateTime.Now.AddMinutes(30), zaszfrowanyKlucz);
+            var expires = DateTime.Now.AddMinutes(30);
+            var token = new JwtSecurityToken("http://localhost:45455", null, new List<Claim> { new Claim(ClaimTypes.Role, res.Role) }, null, expires, zaszfrowanyKlucz);
             res.Token = new JwtSecurityTokenHandler().WriteToken(token);
+            var tokenWithScheme = "Bearer " + res.Token;
+            var session = new Session()
+            {
+                UserId = userLogin.Id,
+                Token = tokenWithScheme,
+                ExpiresAt = expires
+            };
+
             return res;
         }
     }
