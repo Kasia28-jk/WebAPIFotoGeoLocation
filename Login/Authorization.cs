@@ -29,7 +29,8 @@ namespace FotoGeoLocationWebApplication.Login
 
             string hashed = _encryptionProvider.GetEncryptedPassword(login.Password);
 
-            var userLogin = _dataContext.Users.SingleOrDefault(x => x.UserName.Equals(login.Login) && x.Password.Equals(hashed));
+            var userLogin = _dataContext.Users.SingleOrDefault(x => x.UserName.Equals(login.Login) 
+            && x.Password.Equals(hashed));
 
             if (userLogin == null)
             {
@@ -64,7 +65,8 @@ namespace FotoGeoLocationWebApplication.Login
                 Token = tokenWithScheme,
                 ExpiresAt = expires
             };
-
+            _dataContext.Sessions.Add(session);
+            _dataContext.SaveChanges();
             return res;
         }
     }
