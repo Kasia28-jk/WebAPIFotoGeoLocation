@@ -70,7 +70,6 @@ namespace FotoGeoLocationWebApplication.Controllers
             }
 
             var image = Image.FromFile(path);
-
             try
             {
                 var gpsData = _gpsDataExtractor.GetGpsData(image);

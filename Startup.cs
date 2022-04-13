@@ -2,6 +2,7 @@ using FotoGeoLocationWebApplication.Controllers;
 using FotoGeoLocationWebApplication.Data;
 using FotoGeoLocationWebApplication.GpsData;
 using FotoGeoLocationWebApplication.Login;
+using FotoGeoLocationWebApplication.Pictures;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -82,8 +83,9 @@ namespace FotoGeoLocationWebApplication
             services.AddScoped<IAuthorization, Authorization>();
             services.AddScoped<IRegister, Register>();
             services.AddScoped<IHashProvider, HashProvider>();
-            services.AddScoped<IGpsDataExtractor, GpsDataExtractor>();
-            
+            services.AddScoped<IGpsDataExtractor, GpsDataExtractor>();//IPictureProvider
+            services.AddScoped<IPictureProvider, PictureProvider>();//IPictureProvider
+
             services.AddControllers();
             services.AddHttpContextAccessor();
            // services.AddSingleton<IGpsDataExtractor, GpsDataExtractor>();
