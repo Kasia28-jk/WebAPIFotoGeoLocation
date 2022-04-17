@@ -29,7 +29,7 @@ namespace FotoGeoLocationWebApplication.Login
 
             string hashed = _encryptionProvider.GetEncryptedPassword(login.Password);
 
-            var userLogin = _dataContext.Users.SingleOrDefault(x => x.UserName.Equals(login.Login) 
+            var userLogin = _dataContext.Users.SingleOrDefault(x => x.UserName.Equals(login.Login)
             && x.Password.Equals(hashed));
 
             if (userLogin == null)
@@ -52,22 +52,47 @@ namespace FotoGeoLocationWebApplication.Login
              {
                  throw new Exception("Błędny login lub hasło!");
              }*/
+            var userSesion = _dataContext.Sessions.SingleOrDefault(x => x.UserId.Equals(userLogin.Id));
+            
+            if (userSesion == null || userSesion.ExpiresAt < DateTime.Now)
+            {
+                var expires = DateTime.Now.AddMinutes(30);
 
+                res.Token = GetToken(res.Role, expires);
+                var tokenWithScheme = "Bearer " + res.Token;
+
+                var session = new Session()
+                {
+                    UserId = userLogin.Id,
+                    Token = tokenWithScheme,
+                    ExpiresAt = expires
+                };
+
+                _dataContext.Sessions.Add(session);
+                _dataContext.SaveChanges();
+            }
+            else
+            {
+                var expires = DateTime.Now.AddMinutes(30);
+
+                res.Token = GetToken(res.Role, expires);
+                var tokenWithScheme = "Bearer " + res.Token;
+
+                userSesion.ExpiresAt = expires;
+                userSesion.Token = tokenWithScheme;
+
+                _dataContext.Sessions.Update(userSesion);
+                _dataContext.SaveChanges();
+            }
+            return res;
+        }
+
+        private string GetToken(string role, DateTime expires)
+        {
             var klucz = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("bardzotrudnehaslotokena"));
             var zaszfrowanyKlucz = new SigningCredentials(klucz, SecurityAlgorithms.HmacSha256);
-            var expires = DateTime.Now.AddMinutes(30);
-            var token = new JwtSecurityToken("http://localhost:45455", null, new List<Claim> { new Claim(ClaimTypes.Role, res.Role) }, null, expires, zaszfrowanyKlucz);
-            res.Token = new JwtSecurityTokenHandler().WriteToken(token);
-            var tokenWithScheme = "Bearer " + res.Token;
-            var session = new Session()
-            {
-                UserId = userLogin.Id,
-                Token = tokenWithScheme,
-                ExpiresAt = expires
-            };
-            _dataContext.Sessions.Add(session);
-            _dataContext.SaveChanges();
-            return res;
+            var token = new JwtSecurityToken("http://localhost:45455", null, new List<Claim> { new Claim(ClaimTypes.Role, role) }, null, expires, zaszfrowanyKlucz);
+            return new JwtSecurityTokenHandler().WriteToken(token); 
         }
     }
 }

@@ -19,11 +19,6 @@ namespace FotoGeoLocationWebApplication.Pictures
 
         public IEnumerable<PictureDto> GetPictures(int userId)
         {
-            if(userId == null)
-            {
-                return Enumerable.Empty<PictureDto>();
-            }
-
             var pictures =  _dataContext.Pictures
                 .Where(x => x.UserId.Equals(userId))
                 .Select(x => CreatePictureDto(x)).ToList();

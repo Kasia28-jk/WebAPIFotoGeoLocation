@@ -47,7 +47,7 @@ namespace FotoGeoLocationWebApplication.Controllers
             Request.Headers.TryGetValue("Authorization", out StringValues authorizationToken);
             var token = authorizationToken.ToString();
             var session = _dataContext.Sessions.SingleOrDefault(x => x.Token.Equals(token) 
-                                                                    && x.ExpiresAt > DateTime.UtcNow);
+                                                                    && x.ExpiresAt > DateTime.Now);
             if(session == null)
             {
                 return null;

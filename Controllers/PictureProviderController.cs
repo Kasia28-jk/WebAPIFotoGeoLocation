@@ -1,10 +1,13 @@
-﻿using FotoGeoLocationWebApplication.Models;
+﻿using FotoGeoLocationWebApplication.Data;
+using FotoGeoLocationWebApplication.Models;
 using FotoGeoLocationWebApplication.Pictures;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Primitives;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FotoGeoLocationWebApplication.Controllers
 {
@@ -14,12 +17,15 @@ namespace FotoGeoLocationWebApplication.Controllers
     {
         private readonly IPictureProvider _pictureProvider;
         private readonly ILogger _logger;
+        private readonly DataContext _dataContext;
 
         public PictureProviderController(IPictureProvider pictureProvider,
-            ILogger<PictureProviderController> logger)
+            ILogger<PictureProviderController> logger,
+            DataContext dataContext)
         {
             _pictureProvider = pictureProvider;
             _logger = logger;
+            _dataContext = dataContext;
         }
 
         [HttpGet]
@@ -28,8 +34,10 @@ namespace FotoGeoLocationWebApplication.Controllers
         {
             Request.Headers.TryGetValue("Authorization", out StringValues authorizationToken);
             var token = authorizationToken.ToString();
+            var session = _dataContext.Sessions.SingleOrDefault(x => x.Token.Equals(token)
+                                                                 && x.ExpiresAt > DateTime.Now);
 
-            return _pictureProvider.GetPictures(token);
+            return _pictureProvider.GetPictures(session.UserId);
         }
     }
 }
