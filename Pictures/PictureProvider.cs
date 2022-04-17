@@ -1,7 +1,6 @@
 ﻿using FotoGeoLocationWebApplication.Data;
 using FotoGeoLocationWebApplication.Entities;
 using FotoGeoLocationWebApplication.Models;
-using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -18,17 +17,15 @@ namespace FotoGeoLocationWebApplication.Pictures
             _dataContext = dataContext;
         }
 
-        public IEnumerable<PictureDto> GetPictures(string token)
+        public IEnumerable<PictureDto> GetPictures(int userId)
         {
-            var session = _dataContext.Sessions.SingleOrDefault(x => x.Token.Equals(token)
-                                                                   && x.ExpiresAt > DateTime.UtcNow);
-            if(session == null)
+            if(userId == null)
             {
                 return Enumerable.Empty<PictureDto>();
             }
 
             var pictures =  _dataContext.Pictures
-                .Where(x => x.UserId.Equals(session.UserId))
+                .Where(x => x.UserId.Equals(userId))
                 .Select(x => CreatePictureDto(x)).ToList();
             return pictures;
             

@@ -1,6 +1,7 @@
 ﻿using FotoGeoLocationWebApplication.Data;
 using FotoGeoLocationWebApplication.Entities;
 using FotoGeoLocationWebApplication.GpsData;
+using FotoGeoLocationWebApplication.Pictures;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
@@ -23,16 +24,19 @@ namespace FotoGeoLocationWebApplication.Controllers
         private readonly IGpsDataExtractor _gpsDataExtractor;
         private readonly ILogger _logger;
         private readonly DataContext _dataContext;
+        private readonly IThumbnailGenerator _thumbnailGenerator;
 
         public UploadPicturesController(IWebHostEnvironment webHostEnvironment,
             IGpsDataExtractor gpsDataExtractor,
             ILogger<UploadPicturesController> logger,
-            DataContext dataContext)
+            DataContext dataContext,
+            IThumbnailGenerator thumbnailGenerator)
         {
             _webHostEnvironment = webHostEnvironment;
             _gpsDataExtractor = gpsDataExtractor;
             _logger = logger;
             _dataContext = dataContext;
+            _thumbnailGenerator = thumbnailGenerator;
         }
 
         [EnableCors("AllowMyOrigin")]
@@ -73,6 +77,12 @@ namespace FotoGeoLocationWebApplication.Controllers
             try
             {
                 var gpsData = _gpsDataExtractor.GetGpsData(image);
+                var imageData = _thumbnailGenerator.GetThumbnailImageData(image, 500, 500);
+                image.Dispose();
+                image = null;
+                System.IO.File.Delete(path);
+                System.IO.File.WriteAllBytes(path, imageData);
+        
                 var picture = new Picture()
                 {
                     Path = path,
@@ -83,12 +93,13 @@ namespace FotoGeoLocationWebApplication.Controllers
 
                 _dataContext.Pictures.Add(picture);
                 _dataContext.SaveChanges();
-
-                image.Dispose();
             }
             catch (Exception ex) //moze stworzyc wlasny exception? we will see about that 
             {
-                image.Dispose();
+                if(image != null)
+                {
+                    image.Dispose();
+                }
                 _logger.LogWarning($"Otrzymane zdjęcie nie zawiera danych GPS! {ex.Message}");
                 System.IO.File.Delete(path);
                 return new UploadPictureResponse()

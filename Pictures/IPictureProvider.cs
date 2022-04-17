@@ -5,6 +5,6 @@ namespace FotoGeoLocationWebApplication.Pictures
 {
     public interface IPictureProvider
     {
-        IEnumerable<PictureDto> GetPictures(string token);
+        IEnumerable<PictureDto> GetPictures(int userId);
     }
 }
