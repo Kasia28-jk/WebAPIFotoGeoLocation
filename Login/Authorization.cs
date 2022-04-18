@@ -29,14 +29,18 @@ namespace FotoGeoLocationWebApplication.Login
 
             string hashed = _encryptionProvider.GetEncryptedPassword(login.Password);
 
-            var userLogin = _dataContext.Users.SingleOrDefault(x => x.UserName.Equals(login.Login)
-            && x.Password.Equals(hashed));
+            var userLogin = _dataContext.Users.SingleOrDefault(x => x.UserName.Equals(login.Login) &&
+                                                                    x.Password.Equals(hashed) &&
+                                                                    x.Enabled.Equals(true));
 
             if (userLogin == null)
             {
                 throw new Exception("Błędny login lub hasło!");
             }
 
+          // userLogin.Enabled = true;
+         //   _dataContext.Users.Update(userLogin);
+          //  _dataContext.SaveChanges();
             res.Role = "User";
             /* Console.WriteLine("login:" + login.Login);
              Console.WriteLine("Haslo:" + login.Haslo);
