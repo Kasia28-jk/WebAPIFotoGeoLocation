@@ -6,6 +6,7 @@ using FotoGeoLocationWebApplication.Data;
 using System.Linq;
 using System;
 using FotoGeoLocationWebApplication.Login;
+using FotoGeoLocationWebApplication.Models;
 
 namespace FotoGeoLocationWebApplication.Controllers
 {
@@ -28,7 +29,7 @@ namespace FotoGeoLocationWebApplication.Controllers
 
         [HttpPost]
         [Authorize]
-        public void DeleteUser(string password)
+        public bool DeleteUser(UserToRemoveDto password)
         {
             Request.Headers.TryGetValue("Authorization", out StringValues authorizationToken);
             var token = authorizationToken.ToString();
@@ -36,11 +37,13 @@ namespace FotoGeoLocationWebApplication.Controllers
                                                                  && x.ExpiresAt > DateTime.Now);
             try
             {
-                _delete.DeleteUser(password, session.UserId);
+                _delete.DeleteUser(password.Password, session.UserId);
+                return true;    
             }
             catch (Exception ex)
             {
                 _logger.LogError("Błąd usuwanie użytkownika! ");
+                return false;
             }
         }
     }
