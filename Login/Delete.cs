@@ -20,7 +20,8 @@ namespace FotoGeoLocationWebApplication.Login
             string hashed = _encryptionProvider.GetEncryptedPassword(password);
 
             var userLogin = _dataContext.Users.SingleOrDefault(x => x.Id.Equals(userId) &&
-                                                                    x.Password.Equals(hashed));
+                                                                    x.Password.Equals(hashed) &&
+                                                                    x.Enabled.Equals(true));
             if (userLogin == null)
             {
                 throw new Exception("Nie ma takie użytkownika!");

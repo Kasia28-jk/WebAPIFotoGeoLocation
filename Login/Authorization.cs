@@ -60,6 +60,11 @@ namespace FotoGeoLocationWebApplication.Login
             
             if (userSesion == null || userSesion.ExpiresAt < DateTime.Now)
             {
+                if(userSesion != null)
+                {
+                    _dataContext.Sessions.Remove(userSesion);
+                }
+
                 var expires = DateTime.Now.AddMinutes(30);
 
                 res.Token = GetToken(res.Role, expires);

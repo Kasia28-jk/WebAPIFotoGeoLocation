@@ -27,7 +27,8 @@ namespace FotoGeoLocationWebApplication.Controllers
             _dataContext = dataContext;
         }
 
-        [HttpPost]
+        //[HttpPost]
+        [HttpDelete]
         [Authorize]
         public bool DeleteUser(UserToRemoveDto password)
         {
