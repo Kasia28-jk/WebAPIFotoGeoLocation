@@ -48,6 +48,8 @@ namespace FotoGeoLocationWebApplication.Controllers
             var token = authorizationToken.ToString();
             var session = _dataContext.Sessions.SingleOrDefault(x => x.Token.Equals(token) 
                                                                     && x.ExpiresAt > DateTime.Now);
+            var user = _dataContext.Users.SingleOrDefault(x => x.Id.Equals(session.UserId));
+
             if(session == null)
             {
                 return null;
@@ -89,6 +91,7 @@ namespace FotoGeoLocationWebApplication.Controllers
                     Latitude = gpsData.latitude,
                     Longitude = gpsData.longitude,
                     UserId = session.UserId,
+                    UserName = user.UserName
                 };
 
                 _dataContext.Pictures.Add(picture);

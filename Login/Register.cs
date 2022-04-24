@@ -41,7 +41,8 @@ namespace FotoGeoLocationWebApplication.Login
             {
                 UserName = register.Login,
                 Password = hashed,
-                Enabled = true
+                Enabled = true,
+                Role = register.Role,
             };
 
             _dataContext.Users.Add(user);

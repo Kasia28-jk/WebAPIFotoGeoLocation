@@ -1,0 +1,795 @@
+2022-04-24T13:45:02.2883649+02:00  [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T13:45:02.6189329+02:00  [INF] Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T13:45:02.6395382+02:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T13:45:02.6552261+02:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2022-04-24T13:45:13.7951176+02:00  [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T13:45:14.0276958+02:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T13:45:14.0453384+02:00  [INF] Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T13:45:14.0582001+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2022-04-24T13:45:14.0610333+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T13:45:14.0616052+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T13:45:14.0619418+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T13:45:14.0622450+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T13:45:14.0625787+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2022-04-24T13:45:14.0699518+02:00  [INF] Reverting migration '"20220413150603_Ini"'. (897b81a1)
+2022-04-24T13:45:14.0833191+02:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DROP TABLE [Picture];" (0723d8ff)
+2022-04-24T13:45:14.0845352+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DROP TABLE [Sessions];" (0723d8ff)
+2022-04-24T13:45:14.0854764+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DROP TABLE [User];" (0723d8ff)
+2022-04-24T13:45:14.0865625+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DELETE FROM [__EFMigrationsHistory]
+WHERE [MigrationId] = N'20220413150603_Ini';" (0723d8ff)
+2022-04-24T13:45:46.8566722+02:00  [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T13:46:04.0152337+02:00  [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T13:46:04.5261541+02:00  [INF] Executed DbCommand ("189"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""CREATE DATABASE [FotoGeoLocation];" (0723d8ff)
+2022-04-24T13:46:04.5748631+02:00  [INF] Executed DbCommand ("47"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [FotoGeoLocation] SET READ_COMMITTED_SNAPSHOT ON;
+END;" (0723d8ff)
+2022-04-24T13:46:04.6045848+02:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T13:46:04.7473697+02:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);" (0723d8ff)
+2022-04-24T13:46:04.7487107+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T13:46:04.7637653+02:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T13:46:04.7678205+02:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2022-04-24T13:46:04.7925266+02:00  [INF] Applying migration '"20220424114546_initDatabases"'. (0e2ac64d)
+2022-04-24T13:46:04.8149851+02:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Picture] (
+    [Id] int NOT NULL IDENTITY,
+    [Path] nvarchar(max) NULL,
+    [Latitude] float NOT NULL,
+    [Longitude] float NOT NULL,
+    [UserId] int NOT NULL,
+    [UserName] nvarchar(max) NULL,
+    CONSTRAINT [PK_Picture] PRIMARY KEY ([Id])
+);" (0723d8ff)
+2022-04-24T13:46:04.8162476+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Sessions] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [Token] nvarchar(max) NULL,
+    [ExpiresAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_Sessions] PRIMARY KEY ([Id])
+);" (0723d8ff)
+2022-04-24T13:46:04.8180120+02:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [User] (
+    [Id] int NOT NULL IDENTITY,
+    [UserName] nvarchar(max) NULL,
+    [Password] nvarchar(max) NULL,
+    [Enabled] bit NOT NULL,
+    [Role] nvarchar(max) NULL,
+    CONSTRAINT [PK_User] PRIMARY KEY ([Id])
+);" (0723d8ff)
+2022-04-24T13:46:04.8193009+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220424114546_initDatabases', N'5.0.15');" (0723d8ff)
+2022-04-24T13:46:04.8321591+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T13:46:04.8444900+02:00  [INF] Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2022-04-24T13:46:05.0324878+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [User] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2022-04-24T13:46:05.1823336+02:00  [INF] Executed DbCommand ("24"ms) [Parameters=["@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [User] ([Enabled], [Password], [Role], [UserName])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [User]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-04-24T13:46:05.2062185+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [User] ([Enabled], [Password], [Role], [UserName])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [User]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-04-24T13:46:05.2715587+02:00  [INF] User profile is available. Using '"C:\Users\kasia\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2022-04-24T13:46:05.4978252+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-04-24T13:46:05.4980675+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-04-24T13:46:05.4980919+02:00  [INF] Content root path: "D:\PrazaInz\FotoGeoLocationWebApplication" (b5d60022)
+2022-04-24T13:46:05.5278174+02:00 80000025-0005-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - (ca22a1cb)
+2022-04-24T13:46:05.7759227+02:00 8000003e-000a-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2022-04-24T13:46:05.7775403+02:00 80000025-0005-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 250.6065ms (791a596a)
+2022-04-24T13:46:05.7872659+02:00 8000003e-000a-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/_framework/aspnetcore-browser-refresh.js - - - 200 12016 application/javascript;+charset=utf-8 11.0446ms (791a596a)
+2022-04-24T13:46:05.8980259+02:00 80000075-0006-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - (ca22a1cb)
+2022-04-24T13:46:05.9702921+02:00 80000075-0006-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 72.2340ms (791a596a)
+2022-04-24T13:53:36.0320566+02:00  [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T13:53:36.4083512+02:00  [INF] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T13:53:36.4306320+02:00  [INF] Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T13:53:36.4331628+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T13:53:36.4335688+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T13:53:36.4577662+02:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2022-04-24T13:53:36.4814371+02:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2022-04-24T13:53:36.4890622+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T13:53:36.4970002+02:00  [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2022-04-24T13:53:36.6744065+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [User] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2022-04-24T13:53:36.7077342+02:00  [INF] User profile is available. Using '"C:\Users\kasia\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2022-04-24T13:53:36.8747445+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-04-24T13:53:36.8751602+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-04-24T13:53:36.8752261+02:00  [INF] Content root path: "D:\PrazaInz\FotoGeoLocationWebApplication" (b5d60022)
+2022-04-24T13:53:36.8929292+02:00 8000001e-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - (ca22a1cb)
+2022-04-24T13:53:37.0774582+02:00 80000020-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2022-04-24T13:53:37.0786575+02:00 8000001e-0002-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 187.3296ms (791a596a)
+2022-04-24T13:53:37.0916367+02:00 80000020-0002-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/_framework/aspnetcore-browser-refresh.js - - - 200 12016 application/javascript;+charset=utf-8 13.7904ms (791a596a)
+2022-04-24T13:53:37.2274125+02:00 80000079-0006-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - (ca22a1cb)
+2022-04-24T13:53:37.3052184+02:00 80000079-0006-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 77.7834ms (791a596a)
+2022-04-24T13:53:43.4309029+02:00 80000027-0005-ff00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 HEAD https://localhost:44304/ - - (ca22a1cb)
+2022-04-24T13:53:43.5243371+02:00 80000027-0005-ff00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 HEAD https://localhost:44304/ - - - 404 - - 93.4114ms (791a596a)
+2022-04-24T13:54:17.6714170+02:00 8000003d-0004-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44304/api/Register application/json 71 (ca22a1cb)
+2022-04-24T13:54:17.6768841+02:00 8000003d-0004-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T13:54:17.6834323+02:00 8000003d-0004-ff00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.RegisterController.RegisterUser (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T13:54:17.7089720+02:00 8000003d-0004-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"RegisterUser\", controller = \"Register\"}". Executing controller action with signature "Boolean RegisterUser(FotoGeoLocationWebApplication.Models.RegisterDto)" on controller "FotoGeoLocationWebApplication.Controllers.RegisterController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T13:54:27.1009713+02:00 8000003d-0004-ff00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T13:54:27.1686020+02:00 8000003d-0004-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("18"ms) [Parameters=["@__register_Login_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [User] AS [u]
+        WHERE ([u].[UserName] = @__register_Login_0) AND ([u].[Enabled] = CAST(1 AS bit))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2022-04-24T13:54:29.6130549+02:00 8000003d-0004-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [User] ([Enabled], [Password], [Role], [UserName])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [User]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-04-24T13:54:32.1330248+02:00 8000003d-0004-ff00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"System.Boolean"'. (605b4265)
+2022-04-24T13:54:32.1450797+02:00 8000003d-0004-ff00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.RegisterController.RegisterUser (FotoGeoLocationWebApplication)" in 14429.7173ms (afa2e885)
+2022-04-24T13:54:32.1451443+02:00 8000003d-0004-ff00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.RegisterController.RegisterUser (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T13:54:32.1502469+02:00 8000003d-0004-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44304/api/Register application/json 71 - 200 - application/json;+charset=utf-8 14478.9623ms (791a596a)
+2022-04-24T13:56:34.5611706+02:00  [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T13:56:34.8363989+02:00  [INF] Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T13:56:34.8578066+02:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T13:56:34.8604270+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T13:56:34.8610317+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T13:56:34.8758787+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2022-04-24T13:56:34.8946234+02:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2022-04-24T13:56:34.9027187+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T13:56:34.9100126+02:00  [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2022-04-24T13:56:35.0707417+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [User] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2022-04-24T13:56:35.1011409+02:00  [INF] User profile is available. Using '"C:\Users\kasia\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2022-04-24T13:56:35.2640527+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-04-24T13:56:35.2673640+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-04-24T13:56:35.2674208+02:00  [INF] Content root path: "D:\PrazaInz\FotoGeoLocationWebApplication" (b5d60022)
+2022-04-24T13:56:35.2856554+02:00 80000036-0004-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - (ca22a1cb)
+2022-04-24T13:56:35.4623572+02:00 8000002b-0005-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2022-04-24T13:56:35.4633437+02:00 80000036-0004-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 179.9732ms (791a596a)
+2022-04-24T13:56:35.4778982+02:00 8000002b-0005-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/_framework/aspnetcore-browser-refresh.js - - - 200 12016 application/javascript;+charset=utf-8 15.2935ms (791a596a)
+2022-04-24T13:56:35.5804466+02:00 80000038-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - (ca22a1cb)
+2022-04-24T13:56:35.6547416+02:00 80000038-0000-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 74.2457ms (791a596a)
+2022-04-24T13:56:48.0004075+02:00 80000038-0004-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44304/api/Login application/json 38 (ca22a1cb)
+2022-04-24T13:56:48.0293306+02:00 80000038-0004-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T13:56:48.0847498+02:00 80000038-0004-fe00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.LoginController.Login (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T13:56:48.1039831+02:00 80000038-0004-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Login\", controller = \"Login\"}". Executing controller action with signature "WebApplicationTurystyka.Models.AuthorizedUserDto Login(FotoGeoLocationWebApplication.Models.LoginDto)" on controller "FotoGeoLocationWebApplication.Controllers.LoginController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T13:56:53.7441049+02:00 80000038-0004-fe00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T13:56:53.8354513+02:00 80000038-0004-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("17"ms) [Parameters=["@__login_Login_0='?' (Size = 4000), @__hashed_1='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [u].[Id], [u].[Enabled], [u].[Password], [u].[Role], [u].[UserName]
+FROM [User] AS [u]
+WHERE (([u].[UserName] = @__login_Login_0) AND ([u].[Password] = @__hashed_1)) AND ([u].[Enabled] = CAST(1 AS bit))" (0723d8ff)
+2022-04-24T14:00:20.0475284+02:00  [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:00:20.4069395+02:00  [INF] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T14:00:20.4476341+02:00  [INF] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T14:00:20.4527500+02:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T14:00:20.4536199+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T14:00:20.4892664+02:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2022-04-24T14:00:20.5437145+02:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2022-04-24T14:00:20.5550444+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T14:00:20.5676906+02:00  [INF] Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2022-04-24T14:00:20.8161787+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [User] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2022-04-24T14:00:20.8525227+02:00  [INF] User profile is available. Using '"C:\Users\kasia\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2022-04-24T14:00:21.0239103+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-04-24T14:00:21.0270664+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-04-24T14:00:21.0271166+02:00  [INF] Content root path: "D:\PrazaInz\FotoGeoLocationWebApplication" (b5d60022)
+2022-04-24T14:00:21.0455648+02:00 80000042-000a-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - (ca22a1cb)
+2022-04-24T14:00:21.2657004+02:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2022-04-24T14:00:21.2662974+02:00 80000042-000a-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 220.2553ms (791a596a)
+2022-04-24T14:00:21.2784460+02:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/_framework/aspnetcore-browser-refresh.js - - - 200 12016 application/javascript;+charset=utf-8 12.4647ms (791a596a)
+2022-04-24T14:00:21.3934390+02:00 8000003e-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - (ca22a1cb)
+2022-04-24T14:00:21.4787059+02:00 8000003e-0000-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 85.1557ms (791a596a)
+2022-04-24T14:00:26.5634310+02:00 8000003f-0004-ff00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 HEAD https://localhost:44304/ - - (ca22a1cb)
+2022-04-24T14:00:26.6382840+02:00 8000003f-0004-ff00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 HEAD https://localhost:44304/ - - - 404 - - 74.1506ms (791a596a)
+2022-04-24T14:10:33.3810070+02:00  [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:10:33.6605816+02:00  [INF] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T14:10:33.6806460+02:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T14:10:33.6831166+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T14:10:33.6836127+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T14:10:33.6987616+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2022-04-24T14:10:33.7172580+02:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2022-04-24T14:10:33.7242695+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T14:10:33.7263880+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2022-04-24T14:10:33.8887080+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [User] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2022-04-24T14:10:33.9205407+02:00  [INF] User profile is available. Using '"C:\Users\kasia\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2022-04-24T14:10:34.0929591+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-04-24T14:10:34.0931868+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-04-24T14:10:34.0932071+02:00  [INF] Content root path: "D:\PrazaInz\FotoGeoLocationWebApplication" (b5d60022)
+2022-04-24T14:10:34.1119718+02:00 80000042-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - (ca22a1cb)
+2022-04-24T14:24:22.7157547+02:00  [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:24:22.9880777+02:00  [INF] Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T14:24:23.0082597+02:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T14:24:23.0108389+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T14:24:23.0114890+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2022-04-24T14:24:23.0278434+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2022-04-24T14:24:23.0485037+02:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2022-04-24T14:24:23.0559919+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2022-04-24T14:24:23.0593613+02:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2022-04-24T14:24:23.2170598+02:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [User] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2022-04-24T14:24:23.2532747+02:00  [INF] User profile is available. Using '"C:\Users\kasia\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2022-04-24T14:24:23.4205121+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-04-24T14:24:23.4207014+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-04-24T14:24:23.4207290+02:00  [INF] Content root path: "D:\PrazaInz\FotoGeoLocationWebApplication" (b5d60022)
+2022-04-24T14:24:23.4400389+02:00 8000000d-0009-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - (ca22a1cb)
+2022-04-24T14:24:23.6207086+02:00 8000003e-0004-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2022-04-24T14:24:23.6214353+02:00 8000000d-0009-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 183.0132ms (791a596a)
+2022-04-24T14:24:23.6314760+02:00 8000003e-0004-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/_framework/aspnetcore-browser-refresh.js - - - 200 12016 application/javascript;+charset=utf-8 10.4544ms (791a596a)
+2022-04-24T14:24:23.7383686+02:00 80000004-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - (ca22a1cb)
+2022-04-24T14:24:23.8171822+02:00 80000004-0008-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 78.7837ms (791a596a)
+2022-04-24T14:25:34.8563284+02:00 80000029-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 OPTIONS https://localhost:44304/api/Register - - (ca22a1cb)
+2022-04-24T14:25:34.8808290+02:00 80000029-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:25:34.8825369+02:00 80000029-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 OPTIONS https://localhost:44304/api/Register - - - 204 - - 26.2087ms (791a596a)
+2022-04-24T14:25:35.2482087+02:00 8000002a-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST https://localhost:44304/api/Register application/json 79 (ca22a1cb)
+2022-04-24T14:25:35.2509833+02:00 8000002a-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:25:35.3040797+02:00 8000002a-0006-fe00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.RegisterController.RegisterUser (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T14:25:35.3217839+02:00 8000002a-0006-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"RegisterUser\", controller = \"Register\"}". Executing controller action with signature "Boolean RegisterUser(FotoGeoLocationWebApplication.Models.RegisterDto)" on controller "FotoGeoLocationWebApplication.Controllers.RegisterController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T14:25:41.0583935+02:00 8000002a-0006-fe00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:25:41.1274625+02:00 8000002a-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("15"ms) [Parameters=["@__register_Login_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [User] AS [u]
+        WHERE ([u].[UserName] = @__register_Login_0) AND ([u].[Enabled] = CAST(1 AS bit))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2022-04-24T14:25:41.2566917+02:00 8000002a-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [User] ([Enabled], [Password], [Role], [UserName])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [User]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-04-24T14:25:41.2887035+02:00 8000002a-0006-fe00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"System.Boolean"'. (605b4265)
+2022-04-24T14:25:41.2965157+02:00 8000002a-0006-fe00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.RegisterController.RegisterUser (FotoGeoLocationWebApplication)" in 5970.7378ms (afa2e885)
+2022-04-24T14:25:41.2965871+02:00 8000002a-0006-fe00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.RegisterController.RegisterUser (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T14:25:41.2983477+02:00 8000002a-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 POST https://localhost:44304/api/Register application/json 79 - 200 - application/json;+charset=utf-8 6050.2256ms (791a596a)
+2022-04-24T14:25:50.3672357+02:00 8000002b-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 OPTIONS https://localhost:44304/api/Login - - (ca22a1cb)
+2022-04-24T14:25:50.3676162+02:00 8000002b-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:25:50.3678720+02:00 8000002b-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 OPTIONS https://localhost:44304/api/Login - - - 204 - - 0.6765ms (791a596a)
+2022-04-24T14:25:50.7292946+02:00 8000002c-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST https://localhost:44304/api/Login application/json 36 (ca22a1cb)
+2022-04-24T14:25:50.7294920+02:00 8000002c-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:25:50.7298719+02:00 8000002c-0006-fe00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.LoginController.Login (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T14:25:50.7313272+02:00 8000002c-0006-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Login\", controller = \"Login\"}". Executing controller action with signature "WebApplicationTurystyka.Models.AuthorizedUserDto Login(FotoGeoLocationWebApplication.Models.LoginDto)" on controller "FotoGeoLocationWebApplication.Controllers.LoginController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T14:25:55.6029760+02:00 8000002c-0006-fe00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:25:55.6279753+02:00 8000002c-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__login_Login_0='?' (Size = 4000), @__hashed_1='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [u].[Id], [u].[Enabled], [u].[Password], [u].[Role], [u].[UserName]
+FROM [User] AS [u]
+WHERE (([u].[UserName] = @__login_Login_0) AND ([u].[Password] = @__hashed_1)) AND ([u].[Enabled] = CAST(1 AS bit))" (0723d8ff)
+2022-04-24T14:26:00.5442661+02:00 8000002c-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__userLogin_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [s].[Id], [s].[ExpiresAt], [s].[Token], [s].[UserId]
+FROM [Sessions] AS [s]
+WHERE [s].[UserId] = @__userLogin_Id_0" (0723d8ff)
+2022-04-24T14:26:00.6693633+02:00 8000002c-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Sessions] ([ExpiresAt], [Token], [UserId])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Sessions]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-04-24T14:26:00.6716577+02:00 8000002c-0006-fe00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"WebApplicationTurystyka.Models.AuthorizedUserDto"'. (605b4265)
+2022-04-24T14:26:00.6749962+02:00 8000002c-0006-fe00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.LoginController.Login (FotoGeoLocationWebApplication)" in 9943.5485ms (afa2e885)
+2022-04-24T14:26:00.6750806+02:00 8000002c-0006-fe00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.LoginController.Login (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T14:26:00.6757222+02:00 8000002c-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 POST https://localhost:44304/api/Login application/json 36 - 200 - application/json;+charset=utf-8 9946.4331ms (791a596a)
+2022-04-24T14:26:29.3424804+02:00 8000002d-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 OPTIONS https://localhost:44304/UploadPictures - - (ca22a1cb)
+2022-04-24T14:26:29.3429708+02:00 8000002d-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:26:29.3433075+02:00 8000002d-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 OPTIONS https://localhost:44304/UploadPictures - - - 204 - - 0.9322ms (791a596a)
+2022-04-24T14:26:30.4406075+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST https://localhost:44304/UploadPictures multipart/form-data;+boundary=----WebKitFormBoundaryjuWT0riLtnV5iK3O 3383477 (ca22a1cb)
+2022-04-24T14:26:30.4407775+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:26:30.4840033+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] Successfully validated the token. (60169667)
+2022-04-24T14:26:30.4886760+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2022-04-24T14:26:30.4891006+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T14:26:30.4913713+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Post\", controller = \"UploadPictures\"}". Executing controller action with signature "FotoGeoLocationWebApplication.GpsData.UploadPictureResponse Post(Microsoft.AspNetCore.Http.IFormFile)" on controller "FotoGeoLocationWebApplication.Controllers.UploadPicturesController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T14:26:38.9384848+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:26:38.9496275+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__token_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [s].[Id], [s].[ExpiresAt], [s].[Token], [s].[UserId]
+FROM [Sessions] AS [s]
+WHERE ([s].[Token] = @__token_0) AND ([s].[ExpiresAt] > GETDATE())" (0723d8ff)
+2022-04-24T14:26:41.6302506+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__session_UserId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [u].[Id], [u].[Enabled], [u].[Password], [u].[Role], [u].[UserName]
+FROM [User] AS [u]
+WHERE [u].[Id] = @__session_UserId_0" (0723d8ff)
+2022-04-24T14:26:48.4835989+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = Double), @p1='?' (DbType = Double), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Picture] ([Latitude], [Longitude], [Path], [UserId], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Picture]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-04-24T14:26:48.4872342+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] Zdjęcie D:\PrazaInz\FotoGeoLocationWebApplication\UploadedPictures\09d05223-6f82-4439-9953-0b1ce839d8d7IMG20220409105555.jpg zostało zapisane w bazie danych (c858f20d)
+2022-04-24T14:26:48.4879958+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"FotoGeoLocationWebApplication.GpsData.UploadPictureResponse"'. (605b4265)
+2022-04-24T14:26:48.4899327+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)" in 17998.4702ms (afa2e885)
+2022-04-24T14:26:48.4902902+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T14:26:48.4920204+02:00 8000002e-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 POST https://localhost:44304/UploadPictures multipart/form-data;+boundary=----WebKitFormBoundaryjuWT0riLtnV5iK3O 3383477 - 200 - application/json;+charset=utf-8 18051.4087ms (791a596a)
+2022-04-24T14:26:54.0037668+02:00 8000002f-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 OPTIONS https://localhost:44304/PictureProvider - - (ca22a1cb)
+2022-04-24T14:26:54.0038830+02:00 8000002f-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:26:54.0041691+02:00 8000002f-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 OPTIONS https://localhost:44304/PictureProvider - - - 204 - - 0.4116ms (791a596a)
+2022-04-24T14:26:54.3658910+02:00 80000030-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET https://localhost:44304/PictureProvider - - (ca22a1cb)
+2022-04-24T14:26:54.3662068+02:00 80000030-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:26:54.3664504+02:00 80000030-0006-fe00-b63f-84710c7967bb [INF] Successfully validated the token. (60169667)
+2022-04-24T14:26:54.3667115+02:00 80000030-0006-fe00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2022-04-24T14:26:54.3667503+02:00 80000030-0006-fe00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.PictureProviderController.GetPictures (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T14:26:54.3678113+02:00 80000030-0006-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetPictures\", controller = \"PictureProvider\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[FotoGeoLocationWebApplication.Models.PictureDto] GetPictures()" on controller "FotoGeoLocationWebApplication.Controllers.PictureProviderController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T14:26:54.3692905+02:00 80000030-0006-fe00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:26:54.3715550+02:00 80000030-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__token_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [s].[Id], [s].[ExpiresAt], [s].[Token], [s].[UserId]
+FROM [Sessions] AS [s]
+WHERE ([s].[Token] = @__token_0) AND ([s].[ExpiresAt] > GETDATE())" (0723d8ff)
+2022-04-24T14:26:54.3857372+02:00 80000030-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Latitude], [p].[Longitude], [p].[Path], [p].[UserId], [p].[UserName]
+FROM [Picture] AS [p]
+WHERE [p].[UserId] = @__userId_0" (0723d8ff)
+2022-04-24T14:26:54.3872349+02:00 80000030-0006-fe00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[FotoGeoLocationWebApplication.Models.PictureDto, FotoGeoLocationWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2022-04-24T14:26:54.3928774+02:00 80000030-0006-fe00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.PictureProviderController.GetPictures (FotoGeoLocationWebApplication)" in 24.9661ms (afa2e885)
+2022-04-24T14:26:54.3929844+02:00 80000030-0006-fe00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.PictureProviderController.GetPictures (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T14:26:54.3934228+02:00 80000030-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 GET https://localhost:44304/PictureProvider - - - 200 - application/json;+charset=utf-8 27.4939ms (791a596a)
+2022-04-24T14:27:11.6385065+02:00 80000031-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 OPTIONS https://localhost:44304/UploadPictures - - (ca22a1cb)
+2022-04-24T14:27:11.6385984+02:00 80000031-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:27:11.6388813+02:00 80000031-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 OPTIONS https://localhost:44304/UploadPictures - - - 204 - - 0.3518ms (791a596a)
+2022-04-24T14:27:12.0141797+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST https://localhost:44304/UploadPictures multipart/form-data;+boundary=----WebKitFormBoundaryyfdwcVBfO5z490ix 5144643 (ca22a1cb)
+2022-04-24T14:27:12.0143539+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:27:12.0146324+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] Successfully validated the token. (60169667)
+2022-04-24T14:27:12.0153459+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2022-04-24T14:27:12.0155322+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T14:27:12.0157330+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Post\", controller = \"UploadPictures\"}". Executing controller action with signature "FotoGeoLocationWebApplication.GpsData.UploadPictureResponse Post(Microsoft.AspNetCore.Http.IFormFile)" on controller "FotoGeoLocationWebApplication.Controllers.UploadPicturesController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T14:27:15.4193855+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:27:15.4200392+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__token_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [s].[Id], [s].[ExpiresAt], [s].[Token], [s].[UserId]
+FROM [Sessions] AS [s]
+WHERE ([s].[Token] = @__token_0) AND ([s].[ExpiresAt] > GETDATE())" (0723d8ff)
+2022-04-24T14:27:18.0821028+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__session_UserId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [u].[Id], [u].[Enabled], [u].[Password], [u].[Role], [u].[UserName]
+FROM [User] AS [u]
+WHERE [u].[Id] = @__session_UserId_0" (0723d8ff)
+2022-04-24T14:27:18.3694185+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Double), @p1='?' (DbType = Double), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Picture] ([Latitude], [Longitude], [Path], [UserId], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Picture]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-04-24T14:27:18.3711915+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] Zdjęcie D:\PrazaInz\FotoGeoLocationWebApplication\UploadedPictures\60a1c855-1ee8-41d3-8ccf-9ba4c9c0b9eaIMG20220402162426.jpg zostało zapisane w bazie danych (e0964f88)
+2022-04-24T14:27:18.3714252+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"FotoGeoLocationWebApplication.GpsData.UploadPictureResponse"'. (605b4265)
+2022-04-24T14:27:18.3719032+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)" in 6356.096ms (afa2e885)
+2022-04-24T14:27:18.3719693+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T14:27:18.3737429+02:00 80000032-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 POST https://localhost:44304/UploadPictures multipart/form-data;+boundary=----WebKitFormBoundaryyfdwcVBfO5z490ix 5144643 - 200 - application/json;+charset=utf-8 6359.5432ms (791a596a)
+2022-04-24T14:27:29.6987616+02:00 80000033-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 OPTIONS https://localhost:44304/UploadPictures - - (ca22a1cb)
+2022-04-24T14:27:29.6990000+02:00 80000033-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:27:29.6994677+02:00 80000033-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 OPTIONS https://localhost:44304/UploadPictures - - - 204 - - 0.7234ms (791a596a)
+2022-04-24T14:27:30.0701898+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST https://localhost:44304/UploadPictures multipart/form-data;+boundary=----WebKitFormBoundarySIbrHnAtlJx8FIQX 4265798 (ca22a1cb)
+2022-04-24T14:27:30.0702963+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:27:30.0704665+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] Successfully validated the token. (60169667)
+2022-04-24T14:27:30.0705320+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2022-04-24T14:27:30.0705547+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T14:27:30.0706302+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Post\", controller = \"UploadPictures\"}". Executing controller action with signature "FotoGeoLocationWebApplication.GpsData.UploadPictureResponse Post(Microsoft.AspNetCore.Http.IFormFile)" on controller "FotoGeoLocationWebApplication.Controllers.UploadPicturesController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T14:27:32.9292770+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:27:32.9300238+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__token_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [s].[Id], [s].[ExpiresAt], [s].[Token], [s].[UserId]
+FROM [Sessions] AS [s]
+WHERE ([s].[Token] = @__token_0) AND ([s].[ExpiresAt] > GETDATE())" (0723d8ff)
+2022-04-24T14:27:33.8561814+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__session_UserId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [u].[Id], [u].[Enabled], [u].[Password], [u].[Role], [u].[UserName]
+FROM [User] AS [u]
+WHERE [u].[Id] = @__session_UserId_0" (0723d8ff)
+2022-04-24T14:27:34.0702547+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (DbType = Double), @p1='?' (DbType = Double), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Picture] ([Latitude], [Longitude], [Path], [UserId], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Picture]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-04-24T14:27:34.0711539+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] Zdjęcie D:\PrazaInz\FotoGeoLocationWebApplication\UploadedPictures\0160e1c9-129a-4b9f-b606-cafa27ef394bIMG20220421152938.jpg zostało zapisane w bazie danych (38e9bf3a)
+2022-04-24T14:27:34.0713796+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"FotoGeoLocationWebApplication.GpsData.UploadPictureResponse"'. (605b4265)
+2022-04-24T14:27:34.0718101+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)" in 4001.1239ms (afa2e885)
+2022-04-24T14:27:34.0718793+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T14:27:34.0732948+02:00 80000034-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 POST https://localhost:44304/UploadPictures multipart/form-data;+boundary=----WebKitFormBoundarySIbrHnAtlJx8FIQX 4265798 - 200 - application/json;+charset=utf-8 4003.0838ms (791a596a)
+2022-04-24T14:27:47.9805918+02:00 80000035-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 OPTIONS https://localhost:44304/UploadPictures - - (ca22a1cb)
+2022-04-24T14:27:47.9807492+02:00 80000035-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:27:47.9811496+02:00 80000035-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 OPTIONS https://localhost:44304/UploadPictures - - - 204 - - 0.5466ms (791a596a)
+2022-04-24T14:27:48.3534436+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST https://localhost:44304/UploadPictures multipart/form-data;+boundary=----WebKitFormBoundaryZpYZTvXMocmmCRqQ 3593885 (ca22a1cb)
+2022-04-24T14:27:48.3535941+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:27:48.3537624+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] Successfully validated the token. (60169667)
+2022-04-24T14:27:48.3538197+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2022-04-24T14:27:48.3538490+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T14:27:48.3539518+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Post\", controller = \"UploadPictures\"}". Executing controller action with signature "FotoGeoLocationWebApplication.GpsData.UploadPictureResponse Post(Microsoft.AspNetCore.Http.IFormFile)" on controller "FotoGeoLocationWebApplication.Controllers.UploadPicturesController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T14:27:50.6668270+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:27:50.6674090+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__token_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [s].[Id], [s].[ExpiresAt], [s].[Token], [s].[UserId]
+FROM [Sessions] AS [s]
+WHERE ([s].[Token] = @__token_0) AND ([s].[ExpiresAt] > GETDATE())" (0723d8ff)
+2022-04-24T14:27:50.6679580+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__session_UserId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [u].[Id], [u].[Enabled], [u].[Password], [u].[Role], [u].[UserName]
+FROM [User] AS [u]
+WHERE [u].[Id] = @__session_UserId_0" (0723d8ff)
+2022-04-24T14:27:50.8706237+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (DbType = Double), @p1='?' (DbType = Double), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Picture] ([Latitude], [Longitude], [Path], [UserId], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Picture]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-04-24T14:27:50.8733718+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] Zdjęcie D:\PrazaInz\FotoGeoLocationWebApplication\UploadedPictures\e6b2276d-21d6-45a8-938b-29dd6095bd35IMG20220402231042.jpg zostało zapisane w bazie danych (50f45133)
+2022-04-24T14:27:50.8736026+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"FotoGeoLocationWebApplication.GpsData.UploadPictureResponse"'. (605b4265)
+2022-04-24T14:27:50.8740589+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)" in 2520.0278ms (afa2e885)
+2022-04-24T14:27:50.8741736+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T14:27:50.8754711+02:00 80000036-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 POST https://localhost:44304/UploadPictures multipart/form-data;+boundary=----WebKitFormBoundaryZpYZTvXMocmmCRqQ 3593885 - 200 - application/json;+charset=utf-8 2522.0204ms (791a596a)
+2022-04-24T14:27:56.5709498+02:00 80000037-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 OPTIONS https://localhost:44304/UploadPictures - - (ca22a1cb)
+2022-04-24T14:27:56.5710430+02:00 80000037-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:27:56.5712215+02:00 80000037-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 OPTIONS https://localhost:44304/UploadPictures - - - 204 - - 0.2840ms (791a596a)
+2022-04-24T14:27:56.9422632+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST https://localhost:44304/UploadPictures multipart/form-data;+boundary=----WebKitFormBoundaryFHAeVZgdrIHuz3dK 7160990 (ca22a1cb)
+2022-04-24T14:27:56.9424450+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:27:56.9427047+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] Successfully validated the token. (60169667)
+2022-04-24T14:27:56.9428061+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2022-04-24T14:27:56.9428443+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T14:27:56.9429524+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Post\", controller = \"UploadPictures\"}". Executing controller action with signature "FotoGeoLocationWebApplication.GpsData.UploadPictureResponse Post(Microsoft.AspNetCore.Http.IFormFile)" on controller "FotoGeoLocationWebApplication.Controllers.UploadPicturesController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T14:28:01.7651837+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:28:01.7659150+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__token_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [s].[Id], [s].[ExpiresAt], [s].[Token], [s].[UserId]
+FROM [Sessions] AS [s]
+WHERE ([s].[Token] = @__token_0) AND ([s].[ExpiresAt] > GETDATE())" (0723d8ff)
+2022-04-24T14:28:01.7664618+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__session_UserId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [u].[Id], [u].[Enabled], [u].[Password], [u].[Role], [u].[UserName]
+FROM [User] AS [u]
+WHERE [u].[Id] = @__session_UserId_0" (0723d8ff)
+2022-04-24T14:28:01.9993343+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (DbType = Double), @p1='?' (DbType = Double), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Picture] ([Latitude], [Longitude], [Path], [UserId], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Picture]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-04-24T14:28:01.9997843+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] Zdjęcie D:\PrazaInz\FotoGeoLocationWebApplication\UploadedPictures\04b3512a-dbef-4756-aeba-ca82a0a0c6abIMG20220416121350.jpg zostało zapisane w bazie danych (a41e8d42)
+2022-04-24T14:28:01.9998765+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"FotoGeoLocationWebApplication.GpsData.UploadPictureResponse"'. (605b4265)
+2022-04-24T14:28:02.0001646+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)" in 5057.1534ms (afa2e885)
+2022-04-24T14:28:02.0002237+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T14:28:02.0021364+02:00 80000038-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 POST https://localhost:44304/UploadPictures multipart/form-data;+boundary=----WebKitFormBoundaryFHAeVZgdrIHuz3dK 7160990 - 200 - application/json;+charset=utf-8 5059.8858ms (791a596a)
+2022-04-24T14:28:05.5529606+02:00 80000039-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 OPTIONS https://localhost:44304/PictureProvider - - (ca22a1cb)
+2022-04-24T14:28:05.5532011+02:00 80000039-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:28:05.5536538+02:00 80000039-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 OPTIONS https://localhost:44304/PictureProvider - - - 204 - - 0.7091ms (791a596a)
+2022-04-24T14:28:05.9216232+02:00 8000003a-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET https://localhost:44304/PictureProvider - - (ca22a1cb)
+2022-04-24T14:28:05.9218485+02:00 8000003a-0006-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:28:05.9220516+02:00 8000003a-0006-fe00-b63f-84710c7967bb [INF] Successfully validated the token. (60169667)
+2022-04-24T14:28:05.9221218+02:00 8000003a-0006-fe00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2022-04-24T14:28:05.9221413+02:00 8000003a-0006-fe00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.PictureProviderController.GetPictures (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T14:28:05.9222147+02:00 8000003a-0006-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetPictures\", controller = \"PictureProvider\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[FotoGeoLocationWebApplication.Models.PictureDto] GetPictures()" on controller "FotoGeoLocationWebApplication.Controllers.PictureProviderController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T14:28:05.9225624+02:00 8000003a-0006-fe00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:28:05.9232858+02:00 8000003a-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__token_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [s].[Id], [s].[ExpiresAt], [s].[Token], [s].[UserId]
+FROM [Sessions] AS [s]
+WHERE ([s].[Token] = @__token_0) AND ([s].[ExpiresAt] > GETDATE())" (0723d8ff)
+2022-04-24T14:28:05.9242450+02:00 8000003a-0006-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Latitude], [p].[Longitude], [p].[Path], [p].[UserId], [p].[UserName]
+FROM [Picture] AS [p]
+WHERE [p].[UserId] = @__userId_0" (0723d8ff)
+2022-04-24T14:28:05.9255605+02:00 8000003a-0006-fe00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[FotoGeoLocationWebApplication.Models.PictureDto, FotoGeoLocationWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2022-04-24T14:28:05.9334728+02:00 8000003a-0006-fe00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.PictureProviderController.GetPictures (FotoGeoLocationWebApplication)" in 11.2041ms (afa2e885)
+2022-04-24T14:28:05.9335315+02:00 8000003a-0006-fe00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.PictureProviderController.GetPictures (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T14:28:05.9337972+02:00 8000003a-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 GET https://localhost:44304/PictureProvider - - - 200 - application/json;+charset=utf-8 12.2214ms (791a596a)
+2022-04-24T14:30:11.3596437+02:00 80000016-0007-fb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 OPTIONS https://localhost:44304/api/Login - - (ca22a1cb)
+2022-04-24T14:30:11.3597716+02:00 80000016-0007-fb00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:30:11.3600561+02:00 80000016-0007-fb00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 OPTIONS https://localhost:44304/api/Login - - - 204 - - 0.4220ms (791a596a)
+2022-04-24T14:30:11.7139636+02:00 80000017-0007-fb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST https://localhost:44304/api/Login application/json 38 (ca22a1cb)
+2022-04-24T14:30:11.7141308+02:00 80000017-0007-fb00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:30:11.7142663+02:00 80000017-0007-fb00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.LoginController.Login (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T14:30:11.7144243+02:00 80000017-0007-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Login\", controller = \"Login\"}". Executing controller action with signature "WebApplicationTurystyka.Models.AuthorizedUserDto Login(FotoGeoLocationWebApplication.Models.LoginDto)" on controller "FotoGeoLocationWebApplication.Controllers.LoginController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T14:30:13.5800382+02:00 80000017-0007-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:30:13.5808537+02:00 80000017-0007-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__login_Login_0='?' (Size = 4000), @__hashed_1='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [u].[Id], [u].[Enabled], [u].[Password], [u].[Role], [u].[UserName]
+FROM [User] AS [u]
+WHERE (([u].[UserName] = @__login_Login_0) AND ([u].[Password] = @__hashed_1)) AND ([u].[Enabled] = CAST(1 AS bit))" (0723d8ff)
+2022-04-24T14:30:14.8337513+02:00 80000017-0007-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__userLogin_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [s].[Id], [s].[ExpiresAt], [s].[Token], [s].[UserId]
+FROM [Sessions] AS [s]
+WHERE [s].[UserId] = @__userLogin_Id_0" (0723d8ff)
+2022-04-24T14:30:14.8349315+02:00 80000017-0007-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Sessions] ([ExpiresAt], [Token], [UserId])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Sessions]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-04-24T14:30:14.8356905+02:00 80000017-0007-fb00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"WebApplicationTurystyka.Models.AuthorizedUserDto"'. (605b4265)
+2022-04-24T14:30:14.8360609+02:00 80000017-0007-fb00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.LoginController.Login (FotoGeoLocationWebApplication)" in 3121.5838ms (afa2e885)
+2022-04-24T14:30:14.8361970+02:00 80000017-0007-fb00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.LoginController.Login (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T14:30:14.8400252+02:00 80000017-0007-fb00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 POST https://localhost:44304/api/Login application/json 38 - 200 - application/json;+charset=utf-8 3126.0514ms (791a596a)
+2022-04-24T14:30:29.8788775+02:00 80000018-0007-fb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 OPTIONS https://localhost:44304/UploadPictures - - (ca22a1cb)
+2022-04-24T14:30:29.8789999+02:00 80000018-0007-fb00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:30:29.8792818+02:00 80000018-0007-fb00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 OPTIONS https://localhost:44304/UploadPictures - - - 204 - - 0.4313ms (791a596a)
+2022-04-24T14:30:30.4283660+02:00 80000019-0007-fb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST https://localhost:44304/UploadPictures multipart/form-data;+boundary=----WebKitFormBoundaryg4haUqD2hLYBSZ1Y 8661545 (ca22a1cb)
+2022-04-24T14:30:30.4284686+02:00 80000019-0007-fb00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:30:30.4286229+02:00 80000019-0007-fb00-b63f-84710c7967bb [INF] Successfully validated the token. (60169667)
+2022-04-24T14:30:30.4286747+02:00 80000019-0007-fb00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2022-04-24T14:30:30.4286959+02:00 80000019-0007-fb00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T14:30:30.4287683+02:00 80000019-0007-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Post\", controller = \"UploadPictures\"}". Executing controller action with signature "FotoGeoLocationWebApplication.GpsData.UploadPictureResponse Post(Microsoft.AspNetCore.Http.IFormFile)" on controller "FotoGeoLocationWebApplication.Controllers.UploadPicturesController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T14:30:36.9754419+02:00 80000019-0007-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:30:36.9762043+02:00 80000019-0007-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__token_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [s].[Id], [s].[ExpiresAt], [s].[Token], [s].[UserId]
+FROM [Sessions] AS [s]
+WHERE ([s].[Token] = @__token_0) AND ([s].[ExpiresAt] > GETDATE())" (0723d8ff)
+2022-04-24T14:30:36.9768020+02:00 80000019-0007-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__session_UserId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [u].[Id], [u].[Enabled], [u].[Password], [u].[Role], [u].[UserName]
+FROM [User] AS [u]
+WHERE [u].[Id] = @__session_UserId_0" (0723d8ff)
+2022-04-24T14:30:37.1160277+02:00 80000019-0007-fb00-b63f-84710c7967bb [ERR] Zdjęcie nie zawiera danych GPS. (b10d61ad)
+2022-04-24T14:30:37.1429888+02:00 80000019-0007-fb00-b63f-84710c7967bb [WRN] Otrzymane zdjęcie nie zawiera danych GPS! Property cannot be found. (d5796a04)
+2022-04-24T14:30:37.1440570+02:00 80000019-0007-fb00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"FotoGeoLocationWebApplication.GpsData.UploadPictureResponse"'. (605b4265)
+2022-04-24T14:30:37.1443757+02:00 80000019-0007-fb00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)" in 6715.5691ms (afa2e885)
+2022-04-24T14:30:37.1444162+02:00 80000019-0007-fb00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T14:30:37.1462293+02:00 80000019-0007-fb00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 POST https://localhost:44304/UploadPictures multipart/form-data;+boundary=----WebKitFormBoundaryg4haUqD2hLYBSZ1Y 8661545 - 200 - application/json;+charset=utf-8 6717.8101ms (791a596a)
+2022-04-24T14:30:46.0028125+02:00 8000001a-0007-fb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 OPTIONS https://localhost:44304/PictureProvider - - (ca22a1cb)
+2022-04-24T14:30:46.0029559+02:00 8000001a-0007-fb00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:30:46.0032381+02:00 8000001a-0007-fb00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 OPTIONS https://localhost:44304/PictureProvider - - - 204 - - 0.4931ms (791a596a)
+2022-04-24T14:30:46.3602525+02:00 8000001b-0007-fb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET https://localhost:44304/PictureProvider - - (ca22a1cb)
+2022-04-24T14:30:46.3603847+02:00 8000001b-0007-fb00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:30:46.3605477+02:00 8000001b-0007-fb00-b63f-84710c7967bb [INF] Successfully validated the token. (60169667)
+2022-04-24T14:30:46.3606012+02:00 8000001b-0007-fb00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2022-04-24T14:30:46.3606203+02:00 8000001b-0007-fb00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.PictureProviderController.GetPictures (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T14:30:46.3606927+02:00 8000001b-0007-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetPictures\", controller = \"PictureProvider\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[FotoGeoLocationWebApplication.Models.PictureDto] GetPictures()" on controller "FotoGeoLocationWebApplication.Controllers.PictureProviderController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T14:30:46.3613428+02:00 8000001b-0007-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:30:46.3620975+02:00 8000001b-0007-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__token_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [s].[Id], [s].[ExpiresAt], [s].[Token], [s].[UserId]
+FROM [Sessions] AS [s]
+WHERE ([s].[Token] = @__token_0) AND ([s].[ExpiresAt] > GETDATE())" (0723d8ff)
+2022-04-24T14:30:46.3626229+02:00 8000001b-0007-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Latitude], [p].[Longitude], [p].[Path], [p].[UserId], [p].[UserName]
+FROM [Picture] AS [p]
+WHERE [p].[UserId] = @__userId_0" (0723d8ff)
+2022-04-24T14:30:46.3627630+02:00 8000001b-0007-fb00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[FotoGeoLocationWebApplication.Models.PictureDto, FotoGeoLocationWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2022-04-24T14:30:46.3632479+02:00 8000001b-0007-fb00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.PictureProviderController.GetPictures (FotoGeoLocationWebApplication)" in 2.509ms (afa2e885)
+2022-04-24T14:30:46.3633048+02:00 8000001b-0007-fb00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.PictureProviderController.GetPictures (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T14:30:46.3636687+02:00 8000001b-0007-fb00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 GET https://localhost:44304/PictureProvider - - - 200 - application/json;+charset=utf-8 3.4376ms (791a596a)
+2022-04-24T14:30:59.9036373+02:00 8000001c-0007-fb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 OPTIONS https://localhost:44304/UploadPictures - - (ca22a1cb)
+2022-04-24T14:30:59.9037989+02:00 8000001c-0007-fb00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:30:59.9041481+02:00 8000001c-0007-fb00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 OPTIONS https://localhost:44304/UploadPictures - - - 204 - - 0.5438ms (791a596a)
+2022-04-24T14:31:00.2749177+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST https://localhost:44304/UploadPictures multipart/form-data;+boundary=----WebKitFormBoundaryuDcpxmbV43W2Ysyu 4418716 (ca22a1cb)
+2022-04-24T14:31:00.2750662+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:31:00.2753166+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] Successfully validated the token. (60169667)
+2022-04-24T14:31:00.2754233+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2022-04-24T14:31:00.2754624+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T14:31:00.2755639+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Post\", controller = \"UploadPictures\"}". Executing controller action with signature "FotoGeoLocationWebApplication.GpsData.UploadPictureResponse Post(Microsoft.AspNetCore.Http.IFormFile)" on controller "FotoGeoLocationWebApplication.Controllers.UploadPicturesController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T14:31:02.9710856+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:31:02.9719421+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__token_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [s].[Id], [s].[ExpiresAt], [s].[Token], [s].[UserId]
+FROM [Sessions] AS [s]
+WHERE ([s].[Token] = @__token_0) AND ([s].[ExpiresAt] > GETDATE())" (0723d8ff)
+2022-04-24T14:31:02.9723639+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__session_UserId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [u].[Id], [u].[Enabled], [u].[Password], [u].[Role], [u].[UserName]
+FROM [User] AS [u]
+WHERE [u].[Id] = @__session_UserId_0" (0723d8ff)
+2022-04-24T14:31:03.1829703+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (DbType = Double), @p1='?' (DbType = Double), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Picture] ([Latitude], [Longitude], [Path], [UserId], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Picture]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-04-24T14:31:03.1855852+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] Zdjęcie D:\PrazaInz\FotoGeoLocationWebApplication\UploadedPictures\90c395ce-af5c-442a-b9bd-eaddbbf546abIMG20220421153318.jpg zostało zapisane w bazie danych (f3ce9e38)
+2022-04-24T14:31:03.1857122+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"FotoGeoLocationWebApplication.GpsData.UploadPictureResponse"'. (605b4265)
+2022-04-24T14:31:03.1859934+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)" in 2910.377ms (afa2e885)
+2022-04-24T14:31:03.1860276+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.UploadPicturesController.Post (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T14:31:03.1872493+02:00 8000001d-0007-fb00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 POST https://localhost:44304/UploadPictures multipart/form-data;+boundary=----WebKitFormBoundaryuDcpxmbV43W2Ysyu 4418716 - 200 - application/json;+charset=utf-8 2912.3076ms (791a596a)
+2022-04-24T14:31:06.8035093+02:00 8000001e-0007-fb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 OPTIONS https://localhost:44304/PictureProvider - - (ca22a1cb)
+2022-04-24T14:31:06.8036463+02:00 8000001e-0007-fb00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:31:06.8040017+02:00 8000001e-0007-fb00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 OPTIONS https://localhost:44304/PictureProvider - - - 204 - - 0.5171ms (791a596a)
+2022-04-24T14:31:07.1598605+02:00 8000001f-0007-fb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET https://localhost:44304/PictureProvider - - (ca22a1cb)
+2022-04-24T14:31:07.1601110+02:00 8000001f-0007-fb00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-24T14:31:07.1604578+02:00 8000001f-0007-fb00-b63f-84710c7967bb [INF] Successfully validated the token. (60169667)
+2022-04-24T14:31:07.1606034+02:00 8000001f-0007-fb00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2022-04-24T14:31:07.1606710+02:00 8000001f-0007-fb00-b63f-84710c7967bb [INF] Executing endpoint '"FotoGeoLocationWebApplication.Controllers.PictureProviderController.GetPictures (FotoGeoLocationWebApplication)"' (500cc934)
+2022-04-24T14:31:07.1608288+02:00 8000001f-0007-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetPictures\", controller = \"PictureProvider\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[FotoGeoLocationWebApplication.Models.PictureDto] GetPictures()" on controller "FotoGeoLocationWebApplication.Controllers.PictureProviderController" ("FotoGeoLocationWebApplication"). (122b2fdf)
+2022-04-24T14:31:07.1614087+02:00 8000001f-0007-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.15" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2022-04-24T14:31:07.1623913+02:00 8000001f-0007-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__token_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [s].[Id], [s].[ExpiresAt], [s].[Token], [s].[UserId]
+FROM [Sessions] AS [s]
+WHERE ([s].[Token] = @__token_0) AND ([s].[ExpiresAt] > GETDATE())" (0723d8ff)
+2022-04-24T14:31:07.1633975+02:00 8000001f-0007-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Latitude], [p].[Longitude], [p].[Path], [p].[UserId], [p].[UserName]
+FROM [Picture] AS [p]
+WHERE [p].[UserId] = @__userId_0" (0723d8ff)
+2022-04-24T14:31:07.1641225+02:00 8000001f-0007-fb00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[FotoGeoLocationWebApplication.Models.PictureDto, FotoGeoLocationWebApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2022-04-24T14:31:07.1648397+02:00 8000001f-0007-fb00-b63f-84710c7967bb [INF] Executed action "FotoGeoLocationWebApplication.Controllers.PictureProviderController.GetPictures (FotoGeoLocationWebApplication)" in 3.8868ms (afa2e885)
+2022-04-24T14:31:07.1649451+02:00 8000001f-0007-fb00-b63f-84710c7967bb [INF] Executed endpoint '"FotoGeoLocationWebApplication.Controllers.PictureProviderController.GetPictures (FotoGeoLocationWebApplication)"' (99874f2b)
+2022-04-24T14:31:07.1659286+02:00 8000001f-0007-fb00-b63f-84710c7967bb [INF] Request finished HTTP/1.1 GET https://localhost:44304/PictureProvider - - - 200 - application/json;+charset=utf-8 6.0379ms (791a596a)

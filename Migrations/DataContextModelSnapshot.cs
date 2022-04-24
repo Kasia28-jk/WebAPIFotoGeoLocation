@@ -38,6 +38,9 @@ namespace FotoGeoLocationWebApplication.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Picture");
@@ -75,6 +78,9 @@ namespace FotoGeoLocationWebApplication.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserName")

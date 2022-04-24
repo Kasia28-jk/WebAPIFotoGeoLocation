@@ -38,24 +38,8 @@ namespace FotoGeoLocationWebApplication.Login
                 throw new Exception("Błędny login lub hasło!");
             }
 
-          // userLogin.Enabled = true;
-         //   _dataContext.Users.Update(userLogin);
-          //  _dataContext.SaveChanges();
-            res.Role = "User";
-            /* Console.WriteLine("login:" + login.Login);
-             Console.WriteLine("Haslo:" + login.Haslo);
-             if (login.Login == "admin" && login.Haslo == "admin")
-             {
-                 res.Rola = "Admin";
-             }
-             else if (login.Login == "user" && login.Haslo == "user")
-             {
-                 res.Rola = "User";
-             }
-             else
-             {
-                 throw new Exception("Błędny login lub hasło!");
-             }*/
+            res.Role = userLogin.Role;
+        
             var userSesion = _dataContext.Sessions.SingleOrDefault(x => x.UserId.Equals(userLogin.Id));
             
             if (userSesion == null || userSesion.ExpiresAt < DateTime.Now)
