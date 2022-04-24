@@ -26,6 +26,12 @@ namespace FotoGeoLocationWebApplication.Pictures
             
         }
 
+        public IEnumerable<PictureDto> GetPicturesOfEveryUser()
+        {
+            var pictures = _dataContext.Pictures.Select(x => CreatePictureDto(x)).ToList();
+            return pictures;
+        }
+
         private static PictureDto CreatePictureDto(Picture x)
         {
             byte[] bytes = File.ReadAllBytes(x.Path);
@@ -35,7 +41,8 @@ namespace FotoGeoLocationWebApplication.Pictures
             {
                 Latitude = x.Latitude,
                 Longitude = x.Longitude,
-                File = image
+                File = image,
+                UserName = x.UserName,
             };
         }
     }

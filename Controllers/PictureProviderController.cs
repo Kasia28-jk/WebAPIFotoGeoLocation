@@ -36,8 +36,21 @@ namespace FotoGeoLocationWebApplication.Controllers
             var token = authorizationToken.ToString();
             var session = _dataContext.Sessions.SingleOrDefault(x => x.Token.Equals(token)
                                                                  && x.ExpiresAt > DateTime.Now);
+            var user = _dataContext.Users.SingleOrDefault(x => x.Id.Equals(session.UserId));
 
-            return _pictureProvider.GetPictures(session.UserId);
+
+            if (user.Role.Equals("Dispatcher"))
+            {
+                return _pictureProvider.GetPicturesOfEveryUser();
+            }
+            if (user.Role.Equals("User"))
+            {
+                return _pictureProvider.GetPictures(session.UserId);
+            }
+            else
+            {
+               return null;
+            }
         }
     }
 }
