@@ -83,14 +83,14 @@ namespace FotoGeoLocationWebApplication
             services.AddScoped<IAuthorization, Authorization>();
             services.AddScoped<IRegister, Register>();
             services.AddScoped<IHashProvider, HashProvider>();
-            services.AddScoped<IGpsDataExtractor, GpsDataExtractor>();
+            services.AddScoped<IExifDataExtractor, ExifDataExtractor>();
             services.AddScoped<IPictureProvider, PictureProvider>();
             services.AddScoped<IThumbnailGenerator, ThumbnailGenerator>();
             services.AddScoped<IDelete, Delete>();
 
             services.AddControllers();
             services.AddHttpContextAccessor();
-           // services.AddSingleton<IGpsDataExtractor, GpsDataExtractor>();
+           // services.AddSingleton<IExifDataExtractor, ExifDataExtractor>();
             // services.AddSingleton<UploadPicturesController>();
          /*   services.AddSwaggerGen(c =>
             {

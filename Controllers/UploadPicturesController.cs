@@ -21,19 +21,19 @@ namespace FotoGeoLocationWebApplication.Controllers
     public class UploadPicturesController : Controller
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
-        private readonly IGpsDataExtractor _gpsDataExtractor;
+        private readonly IExifDataExtractor _exifDataExtractor;
         private readonly ILogger _logger;
         private readonly DataContext _dataContext;
         private readonly IThumbnailGenerator _thumbnailGenerator;
 
         public UploadPicturesController(IWebHostEnvironment webHostEnvironment,
-            IGpsDataExtractor gpsDataExtractor,
+            IExifDataExtractor exifDataExtractor,
             ILogger<UploadPicturesController> logger,
             DataContext dataContext,
             IThumbnailGenerator thumbnailGenerator)
         {
             _webHostEnvironment = webHostEnvironment;
-            _gpsDataExtractor = gpsDataExtractor;
+            _exifDataExtractor = exifDataExtractor;
             _logger = logger;
             _dataContext = dataContext;
             _thumbnailGenerator = thumbnailGenerator;
@@ -78,8 +78,9 @@ namespace FotoGeoLocationWebApplication.Controllers
             var image = Image.FromFile(path);
             try
             {
-                var gpsData = _gpsDataExtractor.GetGpsData(image);
+                var gpsData = _exifDataExtractor.GetGpsData(image);
                 var imageData = _thumbnailGenerator.GetThumbnailImageData(image, 500, 500);
+                var imageDateTime = _exifDataExtractor.GetDateTime(image);
                 image.Dispose();
                 image = null;
                 System.IO.File.Delete(path);
