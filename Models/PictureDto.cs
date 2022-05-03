@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System;
 
 namespace FotoGeoLocationWebApplication.Models
 {
@@ -8,5 +8,6 @@ namespace FotoGeoLocationWebApplication.Models
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public string UserName { get; set; }
+        public DateTime Created { get; set; }
     }
 }

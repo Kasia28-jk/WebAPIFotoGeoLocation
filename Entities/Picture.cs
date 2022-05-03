@@ -1,4 +1,6 @@
-﻿namespace FotoGeoLocationWebApplication.Entities
+﻿using System;
+
+namespace FotoGeoLocationWebApplication.Entities
 {
     public class Picture 
     {
@@ -8,5 +10,6 @@
         public double Longitude { get; set; }
         public int UserId { get; set; }
         public string UserName { get; set; }
+        public DateTime Created { get; set; }
     }
 }

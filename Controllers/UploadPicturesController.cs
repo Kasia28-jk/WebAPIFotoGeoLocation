@@ -92,7 +92,8 @@ namespace FotoGeoLocationWebApplication.Controllers
                     Latitude = gpsData.latitude,
                     Longitude = gpsData.longitude,
                     UserId = session.UserId,
-                    UserName = user.UserName
+                    UserName = user.UserName,
+                    Created = imageDateTime
                 };
 
                 _dataContext.Pictures.Add(picture);

@@ -34,8 +34,8 @@ namespace FotoGeoLocationWebApplication.Pictures
 
         private static PictureDto CreatePictureDto(Picture x)
         {
-            byte[] bytes = File.ReadAllBytes(x.Path);
-            string image = Convert.ToBase64String(bytes);
+            var bytes = File.ReadAllBytes(x.Path);
+            var image = Convert.ToBase64String(bytes);
 
             return new PictureDto()
             {
@@ -43,6 +43,7 @@ namespace FotoGeoLocationWebApplication.Pictures
                 Longitude = x.Longitude,
                 File = image,
                 UserName = x.UserName,
+                Created = x.Created
             };
         }
     }

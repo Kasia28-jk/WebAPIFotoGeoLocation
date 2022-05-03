@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FotoGeoLocationWebApplication.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220424114546_initDatabases")]
-    partial class initDatabases
+    [Migration("20220503105441_InitDataBase")]
+    partial class InitDataBase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,6 +27,9 @@ namespace FotoGeoLocationWebApplication.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
 
                     b.Property<double>("Latitude")
                         .HasColumnType("float");
